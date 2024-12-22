@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://lspweodvannb"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_sv22x"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_sv22x")

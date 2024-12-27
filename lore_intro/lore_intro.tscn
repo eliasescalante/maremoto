@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c85w4hbye2vm6"]
+
+[node name="LoreIntro" type="Node2D"]
+
+[node name="ui" type="Node" parent="."]
+
+[node name="fondo" type="ColorRect" parent="ui"]
+offset_right = 1162.0
+offset_bottom = 653.0
+color = Color(0.260091, 0.386689, 0.383609, 1)
+
+[node name="texto" type="RichTextLabel" parent="ui"]
+offset_left = 304.0
+offset_top = 103.0
+offset_right = 769.0
+offset_bottom = 536.0
+bbcode_enabled = true
+text = "lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+tab_size = 6

@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://8a227wo53coa"]
 
 [node name="Level4" type="Node2D"]
+
+[node name="ui" type="Node" parent="."]
+
+[node name="fondo" type="ColorRect" parent="ui"]
+offset_right = 1160.0
+offset_bottom = 649.0
+color = Color(0.842948, 0.635509, 0.910082, 1)

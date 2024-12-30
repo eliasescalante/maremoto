@@ -27,14 +27,14 @@ offset_left = 382.0
 offset_top = 308.0
 offset_right = 735.0
 offset_bottom = 382.0
-text = "OPCIONES"
+text = "CREDITOS"
 
 [node name="options" type="Button" parent="ui"]
 offset_left = 385.0
 offset_top = 396.0
 offset_right = 734.0
 offset_bottom = 470.0
-text = "CREDITOS"
+text = "OPCIONES"
 
 [node name="salir" type="Button" parent="ui"]
 offset_left = 957.0
@@ -53,3 +53,6 @@ text = "SIN NOMBRE
 label_settings = SubResource("LabelSettings_lgatf")
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ui/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="ui/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

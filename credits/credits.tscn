@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://con2silr7sj0f"]
 
 [node name="Credits" type="Node2D"]
+
+[node name="ui" type="Node" parent="."]
+
+[node name="titulo" type="Label" parent="ui"]
+offset_left = 425.0
+offset_top = 227.0
+offset_right = 502.0
+offset_bottom = 250.0
+text = "CREDITOS"

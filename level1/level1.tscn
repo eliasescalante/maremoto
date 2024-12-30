@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=6 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="PackedScene" uid="uid://d0cr41f8g8yd2" path="res://elementosDeNivel/piso.tscn" id="2_1im3p"]
-[ext_resource type="PackedScene" uid="uid://boycpn1i1usb6" path="res://elementosDeNivel/piso_movil.tscn" id="3_j4x23"]
+[ext_resource type="PackedScene" uid="uid://boycpn1i1usb6" path="res://elementosDeNivel/piso_movil_laterales.tscn" id="3_j4x23"]
+[ext_resource type="PackedScene" uid="uid://leg7rnwi4cvx" path="res://elementosDeNivel/piso_movil_vertical.tscn" id="4_wd1vm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
@@ -75,25 +76,48 @@ position = Vector2(994, 785)
 [node name="Obstaculos9" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(1094, 785)
 
-[node name="piso_movil" type="Node" parent="ui"]
+[node name="piso_movil_lateral" type="Node" parent="ui"]
 
-[node name="PisoMovil" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1332, 643)
 
-[node name="PisoMovil2" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil8" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
+position = Vector2(101, 382)
+
+[node name="PisoMovil2" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1547, 551)
 
-[node name="PisoMovil3" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil3" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1663, 128)
 
-[node name="PisoMovil4" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil10" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
+position = Vector2(2216, 660)
+
+[node name="PisoMovil4" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1053, 304)
 
-[node name="PisoMovil5" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil5" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1219, 436)
 
-[node name="PisoMovil6" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil6" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1313, 226)
 
-[node name="PisoMovil7" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+[node name="PisoMovil7" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
 position = Vector2(1618, 818)
+
+[node name="PisoMovil9" parent="ui/piso_movil_lateral" instance=ExtResource("3_j4x23")]
+position = Vector2(1143, 966)
+
+[node name="piso_movil_vertical" type="Node" parent="ui"]
+
+[node name="PisoMovil" parent="ui/piso_movil_vertical" instance=ExtResource("4_wd1vm")]
+position = Vector2(-72, 547)
+
+[node name="PisoMovil2" parent="ui/piso_movil_vertical" instance=ExtResource("4_wd1vm")]
+position = Vector2(1829, 363)
+
+[node name="PisoMovil3" parent="ui/piso_movil_vertical" instance=ExtResource("4_wd1vm")]
+position = Vector2(1986, 967)
+
+[node name="PisoMovil4" parent="ui/piso_movil_vertical" instance=ExtResource("4_wd1vm")]
+position = Vector2(2475, 497)

@@ -64,25 +64,25 @@ script = ExtResource("1_b12xt")
 [node name="fondo" type="ColorRect" parent="ui"]
 offset_left = -10.0
 offset_top = -3.0
-offset_right = 1152.0
-offset_bottom = 650.0
+offset_right = 1284.0
+offset_bottom = 724.0
 color = Color(0.260091, 0.386689, 0.383609, 1)
 
 [node name="texto" type="RichTextLabel" parent="ui"]
-offset_left = 304.0
-offset_top = 103.0
-offset_right = 769.0
-offset_bottom = 536.0
+offset_left = 405.0
+offset_top = 170.0
+offset_right = 870.0
+offset_bottom = 603.0
 bbcode_enabled = true
 text = "lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
 tab_size = 6
 
 [node name="ColorRect" type="ColorRect" parent="ui"]
 custom_minimum_size = Vector2(100, 100)
-offset_left = -25.0
-offset_top = -23.0
-offset_right = 1168.0
-offset_bottom = 660.0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 1292.0
+offset_bottom = 727.0
 color = Color(0.0235294, 0.0235294, 0.0235294, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

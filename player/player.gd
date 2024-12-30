@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 200  # Velocidad de movimiento
-@export var jump_strength: float = 400  # Fuerza del salto
+@export var jump_strength: float = 600  # Fuerza del salto
 
 @onready var sprite = $Sprite2D/AnimatedSprite2D  # Referencia al nodo AnimatedSprite2D
 @onready var camera = $Camera2D  # Referencia al nodo Camera2D

@@ -12,42 +12,42 @@ script = ExtResource("1_5em6y")
 [node name="ui" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="ui"]
-offset_right = 1154.0
-offset_bottom = 647.0
+offset_right = 1288.0
+offset_bottom = 722.0
 
 [node name="start" type="Button" parent="ui"]
-offset_left = 380.0
+offset_left = 469.0
 offset_top = 222.0
-offset_right = 733.0
+offset_right = 822.0
 offset_bottom = 296.0
 text = "START"
 
 [node name="credits" type="Button" parent="ui"]
-offset_left = 382.0
-offset_top = 308.0
-offset_right = 735.0
-offset_bottom = 382.0
+offset_left = 469.0
+offset_top = 313.0
+offset_right = 822.0
+offset_bottom = 387.0
 text = "CREDITOS"
 
 [node name="options" type="Button" parent="ui"]
-offset_left = 385.0
-offset_top = 396.0
-offset_right = 734.0
-offset_bottom = 470.0
+offset_left = 471.0
+offset_top = 400.0
+offset_right = 820.0
+offset_bottom = 474.0
 text = "OPCIONES"
 
 [node name="salir" type="Button" parent="ui"]
-offset_left = 957.0
-offset_top = 580.0
-offset_right = 1128.0
-offset_bottom = 635.0
+offset_left = 1087.0
+offset_top = 651.0
+offset_right = 1258.0
+offset_bottom = 706.0
 text = "SALIR"
 
 [node name="Label" type="Label" parent="ui"]
-offset_left = 292.0
-offset_top = 60.0
-offset_right = 821.0
-offset_bottom = 175.0
+offset_left = 390.0
+offset_top = 85.0
+offset_right = 919.0
+offset_bottom = 200.0
 text = "SIN NOMBRE
 "
 label_settings = SubResource("LabelSettings_lgatf")

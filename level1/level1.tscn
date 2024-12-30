@@ -1,102 +1,99 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=5 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
+[ext_resource type="PackedScene" uid="uid://d0cr41f8g8yd2" path="res://elementosDeNivel/piso.tscn" id="2_1im3p"]
+[ext_resource type="PackedScene" uid="uid://boycpn1i1usb6" path="res://elementosDeNivel/piso_movil.tscn" id="3_j4x23"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
 font_color = Color(1, 0.196078, 1, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eovnr"]
-size = Vector2(3359.5, 114)
-
 [node name="Level1" type="Node2D"]
 
 [node name="ui" type="Node" parent="."]
 
-[node name="fondo" type="ColorRect" parent="ui"]
-offset_left = -480.0
+[node name="fondo_de_nivel" type="ColorRect" parent="ui"]
+offset_left = -584.0
 offset_top = -12.0
-offset_right = 3317.0
-offset_bottom = 874.0
-color = Color(0.990089, 0.982641, 0.958685, 1)
+offset_right = 3319.0
+offset_bottom = 1056.0
+color = Color(0.00756903, 0.00553996, 0.0013296, 1)
 
-[node name="Label" type="Label" parent="ui"]
-offset_left = 510.0
-offset_top = 259.0
-offset_right = 667.0
-offset_bottom = 328.0
+[node name="label_debug" type="Label" parent="ui"]
+offset_left = 229.0
+offset_top = 328.0
+offset_right = 386.0
+offset_bottom = 397.0
+text = "nivel 1"
+label_settings = SubResource("LabelSettings_307ug")
+
+[node name="label_debug2" type="Label" parent="ui"]
+offset_left = 1233.0
+offset_top = 338.0
+offset_right = 1390.0
+offset_bottom = 407.0
+text = "nivel 1"
+label_settings = SubResource("LabelSettings_307ug")
+
+[node name="label_debug3" type="Label" parent="ui"]
+offset_left = 2432.0
+offset_top = 335.0
+offset_right = 2589.0
+offset_bottom = 404.0
 text = "nivel 1"
 label_settings = SubResource("LabelSettings_307ug")
 
 [node name="Player" parent="ui" instance=ExtResource("1_ady08")]
 position = Vector2(95, 520)
 
-[node name="Area2D" type="StaticBody2D" parent="ui"]
+[node name="piso" type="Node" parent="ui"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
-position = Vector2(1684, 672)
-shape = SubResource("RectangleShape2D_eovnr")
-debug_color = Color(0.856145, 0.131192, 0.828252, 0.42)
+[node name="Obstaculos" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(52, 683)
 
-[node name="ColorRect" type="ColorRect" parent="ui/Area2D/CollisionShape2D"]
-offset_left = -2164.0
-offset_top = -56.0
-offset_right = 1660.0
-offset_bottom = 203.0
-color = Color(0.910852, 0.48338, 0.465976, 1)
+[node name="Obstaculos2" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(152, 683)
 
-[node name="ColorRect" type="ColorRect" parent="ui/Area2D"]
-offset_left = 1270.0
-offset_top = 545.0
-offset_right = 1346.0
-offset_bottom = 614.0
-color = Color(0.389794, 0.716598, 0.592713, 1)
+[node name="Obstaculos3" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(333, 683)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D"]
-offset_left = 100.0
-offset_top = 226.0
-offset_right = 302.0
-offset_bottom = 390.0
-color = Color(0.0862745, 1, 1, 1)
+[node name="Obstaculos4" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(527, 596)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D/ColorRect2"]
-offset_left = 730.0
-offset_top = -150.0
-offset_right = 932.0
-offset_bottom = 14.0
-color = Color(0.0862745, 1, 1, 1)
+[node name="Obstaculos5" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(696, 486)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D/ColorRect2/ColorRect2"]
-offset_left = 597.0
-offset_top = 171.0
-offset_right = 799.0
-offset_bottom = 335.0
-color = Color(0.0862745, 1, 1, 1)
+[node name="Obstaculos6" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(869, 604)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D/ColorRect2/ColorRect2/ColorRect2"]
-offset_left = 630.0
-offset_top = -105.0
-offset_right = 832.0
-offset_bottom = 59.0
-color = Color(0.0862745, 1, 1, 1)
+[node name="Obstaculos7" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(906, 377)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D/ColorRect2/ColorRect2/ColorRect2/ColorRect2"]
-offset_left = -545.0
-offset_top = -119.0
-offset_right = -343.0
-offset_bottom = 45.0
-color = Color(0.911206, 0.90789, 0.42858, 1)
+[node name="Obstaculos8" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(994, 785)
 
-[node name="ColorRect3" type="ColorRect" parent="ui/Area2D/ColorRect2/ColorRect2/ColorRect2/ColorRect2"]
-offset_left = 630.0
-offset_top = -105.0
-offset_right = 832.0
-offset_bottom = 59.0
-color = Color(0.0862745, 1, 1, 1)
+[node name="Obstaculos9" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(1094, 785)
 
-[node name="ColorRect2" type="ColorRect" parent="ui/Area2D/ColorRect2/ColorRect2/ColorRect2/ColorRect2/ColorRect3"]
-offset_left = 363.0
-offset_top = 207.0
-offset_right = 565.0
-offset_bottom = 371.0
-color = Color(0.425078, 0.981584, 0.948157, 1)
+[node name="piso_movil" type="Node" parent="ui"]
+
+[node name="PisoMovil" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1332, 643)
+
+[node name="PisoMovil2" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1547, 551)
+
+[node name="PisoMovil3" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1663, 128)
+
+[node name="PisoMovil4" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1053, 304)
+
+[node name="PisoMovil5" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1219, 436)
+
+[node name="PisoMovil6" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1313, 226)
+
+[node name="PisoMovil7" parent="ui/piso_movil" instance=ExtResource("3_j4x23")]
+position = Vector2(1618, 818)

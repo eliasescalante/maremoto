@@ -1,61 +1,63 @@
 extends CharacterBody2D
 
-@export var speed: float = 200  # Velocidad de movimiento
+@export var speed: float = 200  # Velocidad base
 @export var jump_strength: float = 600  # Fuerza del salto
 
-@onready var sprite = $Sprite2D/AnimatedSprite2D  # Referencia al nodo AnimatedSprite2D
-@onready var camera = $Camera2D  # Referencia al nodo Camera2D
+@onready var sprite = $Sprite2D/AnimatedSprite2D
+@onready var camera = $Camera2D
 
-# Variable que guarda la animación de idle por defecto
-var idle_animation : String = "idle_right"
+var idle_animation: String = "idle_right"
+var current_wind_force: float = 0.0  # Fuerza actual del viento
 
 func _ready() -> void:
 	if camera:
-		camera.make_current()  # Activar esta cámara como la principal
-
-	# Establecer la animación inicial
+		camera.make_current()
 	sprite.play(idle_animation)
+
+# Método para añadir la fuerza del viento
+func add_wind_force(force: float) -> void:
+	current_wind_force = force
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
-	
+
 	# Detectar movimiento a la derecha o izquierda
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
-		if is_on_floor() and sprite.animation != "walk_right":  # Solo cambia si no está en la animación correcta
-			sprite.play("walk_right")  # Animación de caminar a la derecha
-		# Cambiar la animación idle a la derecha
+		if is_on_floor() and sprite.animation != "walk_right":
+			sprite.play("walk_right")
 		idle_animation = "idle_right"
 
 	elif Input.is_action_pressed("ui_left"):
 		direction.x -= 1
-		if is_on_floor() and sprite.animation != "walk_left":  # Solo cambia si no está en la animación correcta
-			sprite.play("walk_left")  # Animación de caminar a la izquierda
-		# Cambiar la animación idle a la izquierda
+		if is_on_floor() and sprite.animation != "walk_left":
+			sprite.play("walk_left")
 		idle_animation = "idle_left"
 
-	# Si no hay movimiento horizontal, poner animación idle según la dirección
+	# Animación idle cuando no hay movimiento horizontal
 	if direction.x == 0:
 		if sprite.animation != idle_animation:
-			sprite.play(idle_animation)  # Cambiar la animación idle dependiendo de la dirección
+			sprite.play(idle_animation)
 
-	# Control de la velocidad
-	velocity.x = direction.x * speed  # Movimiento horizontal
+	# Ajustar la velocidad del jugador por entrada del usuario
+	velocity.x = direction.x * speed
+
+	# Sumar el efecto del viento al movimiento horizontal
+	velocity.x += current_wind_force
 
 	# Salto
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = -jump_strength
-		sprite.play("jump")  # Animación de salto
+		sprite.play("jump")
 
-	# Gravedad
+	# Aplicar gravedad
 	if not is_on_floor():
-		velocity.y += 1000 * delta  # Aumenta la gravedad mientras no está en el suelo
+		velocity.y += 1000 * delta
 
-	# Mover al personaje
+	# Mover al jugador
 	move_and_slide()
 
-	# Detener la animación de salto cuando llegue al suelo
-	if is_on_floor() and !sprite.is_playing():
-		# Si no está en una animación y no se mueve, vuelve a "idle"
+	# Detener la animación de salto cuando llega al suelo
+	if is_on_floor() and not sprite.is_playing():
 		if direction.x == 0:
-			sprite.play(idle_animation)  # Vuelve a la animación idle según la dirección
+			sprite.play(idle_animation)

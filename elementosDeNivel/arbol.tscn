@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cknx1fxwkhcm3"]
+
+[ext_resource type="Texture2D" uid="uid://3ggd005417kd" path="res://elementosDeNivel/arbol.png" id="1_5jb3d"]
+
+[node name="Arbol" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.606151, 0.646484)
+texture = ExtResource("1_5jb3d")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-306, -155)
+polygon = PackedVector2Array(-3, 3, -133, 60, -113, 79, 20, 16)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-509, -100, -512, -88, -469, -76, -428, -76, -443, -96, -475, -93)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(38, -145, 101, -164, 165, -183, 181, -164, 242, -135, 281, -108, 333, -95, 421, -105, 525, -144, 548, -129, 454, -99, 357, -68, 300, -79, 229, -108, 161, -125, 98, -117, 57, -97)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-287, -176, -273, -145, -182, -153, -125, -147, -82, -100, 41, -87, 33, -140, 11, -128, -38, -137, -117, -179, -197, -177)

@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0cr41f8g8yd2"]
+[gd_scene load_steps=2 format=3 uid="uid://rtyasefaddg3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jiot2"]
-size = Vector2(99, 80)
+size = Vector2(256, 80)
 
 [node name="piso_estatico" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_jiot2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -51.0
+offset_left = -130.0
 offset_top = -42.0
-offset_right = 50.0
+offset_right = 131.0
 offset_bottom = 41.0
-color = Color(0.808789, 0.518329, 0.180111, 1)
+color = Color(0.783503, 0.536373, 0.130669, 1)

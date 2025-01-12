@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://lspweodvannb"]
+[gd_scene load_steps=27 format=3 uid="uid://lspweodvannb"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sv22x"]
 [ext_resource type="Texture2D" uid="uid://dgpawgmplh0iw" path="res://player/minerman-idle-Iateral2.png" id="2_5tx67"]
@@ -174,9 +174,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqyiy"]
-size = Vector2(67, 117.25)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_sv22x")
 
@@ -192,12 +189,7 @@ scale = Vector2(0.82129, 0.819888)
 sprite_frames = SubResource("SpriteFrames_awe8i")
 animation = &"jump"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.5, -0.625)
-shape = SubResource("RectangleShape2D_kqyiy")
-
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -10000010
-limit_top = -10000004
-limit_right = 9999995
-limit_bottom = 9999996
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -58, -40, -39, -44, 3, -18, 19, -19, 45, -18, 58, -5, 61, 6, 60, 16, 44, 17, 19, 34, 8, 40, -26, 38, -53, 8, -61)

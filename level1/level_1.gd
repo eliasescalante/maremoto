@@ -1,8 +1,9 @@
 extends Node2D
 
-@export var wind_force: float = -300.0  # Fuerza del viento (hacia la izquierda)
+@export var wind_force: float = -200.0  # Fuerza del viento (hacia la izquierda)
 @export var wind_duration: float = 1.0  # Duración del viento en segundos
-@export var wind_interval: float = 5.0  # Intervalo entre ráfagas
+@export var wind_interval: float = 7.0  # Intervalo entre ráfagas
+@export var lose_scene: String = "res://lose.tscn"  # Ruta de la escena de derrota
 
 var is_wind_active: bool = false
 
@@ -13,6 +14,7 @@ var is_wind_active: bool = false
 @onready var wind_particles: Array = []
 
 func _ready() -> void:
+	$StaticBody2D.connect("body_entered", Callable(self, "_on_area2d_body_entered"))
 	# Verificar que los nodos existen
 	if not wind_timer or not player:
 		push_error("Uno o más nodos no están correctamente configurados en la escena.")
@@ -64,3 +66,9 @@ func _stop_wind() -> void:
 	# Eliminar el efecto del viento en el jugador
 	if player and player.has_method("add_wind_force"):
 		player.add_wind_force(0.0)  # Restablecer la fuerza del viento a 0
+
+func _on_area2d_body_entered(body: Node) -> void:
+	# Verificar si el objeto que entra es el jugador
+	if body == player:
+		body.queue_free()  # Eliminar al jugador
+		get_tree().change_scene_to_file("res://win-lose/lose.tscn")

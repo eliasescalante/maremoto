@@ -1,14 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=9 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
 [ext_resource type="PackedScene" uid="uid://d0cr41f8g8yd2" path="res://elementosDeNivel/piso.tscn" id="2_1im3p"]
 [ext_resource type="PackedScene" uid="uid://rtyasefaddg3" path="res://elementosDeNivel/piso_doble.tscn" id="3_yq7hq"]
 [ext_resource type="PackedScene" uid="uid://cknx1fxwkhcm3" path="res://elementosDeNivel/arbol.tscn" id="5_v0vyo"]
+[ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
 font_color = Color(1, 0.196078, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
+size = Vector2(6473, 135)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_tcse7")
@@ -24,7 +28,7 @@ anchor_bottom = 0.78
 offset_left = -398.24
 offset_top = -550.6
 offset_right = 6077.76
-offset_bottom = 717.4
+offset_bottom = 1273.4
 color = Color(0.90439, 0.837292, 0.362531, 1)
 
 [node name="piso_fondo" type="Node" parent="ui"]
@@ -33,28 +37,42 @@ color = Color(0.90439, 0.837292, 0.362531, 1)
 offset_left = -582.0
 offset_top = 1055.0
 offset_right = 192.0
-offset_bottom = 1281.0
+offset_bottom = 1833.0
 color = Color(0.807843, 0.517647, 0.180392, 1)
 
 [node name="piso_2" type="ColorRect" parent="ui/piso_fondo"]
 offset_left = 327.0
 offset_top = 1057.0
 offset_right = 428.0
-offset_bottom = 1282.0
+offset_bottom = 1834.0
 color = Color(0.807843, 0.517647, 0.180392, 1)
 
 [node name="piso_3" type="ColorRect" parent="ui/piso_fondo"]
 offset_left = 556.0
 offset_top = 1054.0
 offset_right = 1072.0
-offset_bottom = 1279.0
+offset_bottom = 1838.0
 color = Color(0.807843, 0.517647, 0.180392, 1)
 
 [node name="piso_4" type="ColorRect" parent="ui/piso_fondo"]
-offset_left = 2373.0
+offset_left = 2437.0
 offset_top = 1056.0
-offset_right = 2892.0
-offset_bottom = 1281.0
+offset_right = 2956.0
+offset_bottom = 1837.0
+color = Color(0.807843, 0.517647, 0.180392, 1)
+
+[node name="piso_5" type="ColorRect" parent="ui/piso_fondo"]
+offset_left = 3083.0
+offset_top = 1052.0
+offset_right = 3598.0
+offset_bottom = 1840.0
+color = Color(0.807843, 0.517647, 0.180392, 1)
+
+[node name="piso_6" type="ColorRect" parent="ui/piso_fondo"]
+offset_left = 5235.0
+offset_top = 1052.0
+offset_right = 5750.0
+offset_bottom = 1836.0
 color = Color(0.807843, 0.517647, 0.180392, 1)
 
 [node name="label_debug" type="Label" parent="ui"]
@@ -160,6 +178,45 @@ initial_velocity_max = 500.0
 scale_amount_min = 5.0
 scale_amount_max = 5.0
 
+[node name="WindParticles6" type="CPUParticles2D" parent="ui"]
+position = Vector2(5807, 1546)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles7" type="CPUParticles2D" parent="ui"]
+position = Vector2(3548, 1646)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles8" type="CPUParticles2D" parent="ui"]
+position = Vector2(1021, 1675)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
 [node name="piso" type="Node" parent="ui"]
 
 [node name="piso_estatico3" parent="ui/piso" instance=ExtResource("2_1im3p")]
@@ -184,19 +241,64 @@ position = Vector2(685, 1020)
 position = Vector2(941, 1020)
 
 [node name="piso_estatico9" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(2502, 1017)
+position = Vector2(2566, 1017)
 
 [node name="piso_estatico10" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(2761, 1017)
+position = Vector2(2825, 1017)
+
+[node name="piso_estatico11" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+position = Vector2(3214, 1016)
 
 [node name="piso_estatico5" parent="ui/piso" instance=ExtResource("3_yq7hq")]
 position = Vector2(-381, 1014)
 
-[node name="piso_estatico2" parent="ui" instance=ExtResource("2_1im3p")]
+[node name="piso_estatico12" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+position = Vector2(3467, 1017)
+
+[node name="piso_estatico13" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(422, 1110)
 
-[node name="piso_estatico" parent="ui" instance=ExtResource("2_1im3p")]
+[node name="piso_estatico14" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(-107, 934)
+
+[node name="piso_estatico15" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+position = Vector2(5364, 1010)
+
+[node name="piso_estatico16" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+position = Vector2(5619, 1012)
+
+[node name="PisoHoja4" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4159, 224)
+
+[node name="PisoHoja5" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4615, 428)
+
+[node name="PisoHoja6" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4162, 606)
+
+[node name="PisoHoja3" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3022, 723)
+
+[node name="PisoHoja8" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(5118, 235)
+
+[node name="PisoHoja2" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3709, 413)
+
+[node name="PisoHoja7" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4903, 769)
+
+[node name="PisoHoja9" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3759, 749)
+
+[node name="PisoHoja10" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4493, 1095)
+
+[node name="PisoHoja11" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3926, 1156)
+
+[node name="PisoHoja" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3029, 241)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1745, 1036)
@@ -205,3 +307,12 @@ position = Vector2(1745, 1036)
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+position = Vector2(1128, 2487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1534, -715)
+shape = SubResource("RectangleShape2D_lf4yh")
+
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]

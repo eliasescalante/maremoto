@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://dlcs3snl3ru0u"]
+[gd_scene load_steps=3 format=3 uid="uid://dlcs3snl3ru0u"]
+
+[ext_resource type="Script" path="res://win-lose/lose.gd" id="1_5eet8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1pnp"]
+font_size = 54
+font_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
 
 [node name="Lose" type="Node2D"]
+script = ExtResource("1_5eet8")
+
+[node name="ui" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ui"]
+offset_right = 1285.0
+offset_bottom = 724.0
+
+[node name="Label" type="Label" parent="ui"]
+offset_left = 454.0
+offset_top = 299.0
+offset_right = 822.0
+offset_bottom = 392.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_j1pnp")
+
+[node name="TRY" type="Button" parent="ui"]
+offset_left = 491.0
+offset_top = 457.0
+offset_right = 750.0
+offset_bottom = 536.0
+text = "TRY AGAIN"
+
+[node name="QUIT" type="Button" parent="ui"]
+offset_left = 491.0
+offset_top = 555.0
+offset_right = 753.0
+offset_bottom = 630.0
+text = "QUIT"
+
+[connection signal="pressed" from="ui/TRY" to="." method="_on_try_pressed"]
+[connection signal="pressed" from="ui/QUIT" to="." method="_on_quit_pressed"]

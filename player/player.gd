@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: float = 200  # Velocidad base
-@export var jump_strength: float = 600  # Fuerza del salto
+@export var jump_strength: float = 650  # Fuerza del salto
+@export var lose_scene: String = "res://lose.tscn"  # Escena de derrota
 
 @onready var sprite = $Sprite2D/AnimatedSprite2D
 @onready var camera = $Camera2D
@@ -61,3 +62,9 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and not sprite.is_playing():
 		if direction.x == 0:
 			sprite.play(idle_animation)
+
+func _on_fall_area_body_entered(body: Node) -> void:
+	# Verificar si el cuerpo colisionado es el jugador
+	if body == self:
+		queue_free()  # Eliminar al jugador
+		get_tree().change_scene(lose_scene)  # Cambiar a la escena de derrota

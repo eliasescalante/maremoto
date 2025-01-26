@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var wind_force: float = -200.0  # Fuerza del viento (hacia la izquierda)
+@export var wind_force: float = -100.0  # Fuerza del viento (hacia la izquierda)
 @export var wind_duration: float = 1.0  # Duración del viento en segundos
 @export var wind_interval: float = 7.0  # Intervalo entre ráfagas
 @export var lose_scene: String = "res://lose.tscn"  # Ruta de la escena de derrota

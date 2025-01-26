@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Variables para el movimiento
 @export var fall_speed: float = 10.0  # Velocidad de caída
-@export var wave_amplitude: float = 5.0  # Amplitud del movimiento ondulante
+@export var wave_amplitude: float = 6.0  # Amplitud del movimiento ondulante
 @export var wave_frequency: float = 2.0  # Frecuencia del movimiento ondulante
 
 var elapsed_time: float = 0.0  # Tiempo transcurrido

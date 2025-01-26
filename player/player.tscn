@@ -190,6 +190,7 @@ sprite_frames = SubResource("SpriteFrames_awe8i")
 animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-20, -58, -28, -39, -25, -2, -18, 19, -19, 45, -18, 58, -5, 61, 6, 60, 16, 44, 17, 19, 18, 0, 21, -28, 17, -49, 8, -61)

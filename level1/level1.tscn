@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=10 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://rtyasefaddg3" path="res://elementosDeNivel/piso_doble.tscn" id="3_yq7hq"]
 [ext_resource type="PackedScene" uid="uid://cknx1fxwkhcm3" path="res://elementosDeNivel/arbol.tscn" id="5_v0vyo"]
 [ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
+[ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
@@ -19,19 +20,12 @@ script = ExtResource("1_tcse7")
 
 [node name="ui" type="Node" parent="."]
 
-[node name="fondo_de_nivel" type="ColorRect" parent="ui"]
-anchors_preset = -1
-anchor_left = -0.142
-anchor_top = 0.78
-anchor_right = -0.142
-anchor_bottom = 0.78
-offset_left = -398.24
-offset_top = -550.6
-offset_right = 6077.76
-offset_bottom = 1273.4
-color = Color(0.90439, 0.837292, 0.362531, 1)
-
 [node name="piso_fondo" type="Node" parent="ui"]
+
+[node name="Lvl1" type="Sprite2D" parent="ui/piso_fondo"]
+position = Vector2(2950, -530)
+scale = Vector2(4.65161, 4.44618)
+texture = ExtResource("7_j5yra")
 
 [node name="piso_1" type="ColorRect" parent="ui/piso_fondo"]
 offset_left = -582.0
@@ -225,6 +219,21 @@ position = Vector2(378, 1016)
 [node name="piso_estatico" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(52, 1014)
 
+[node name="piso_estatico17" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(3635, 1292)
+
+[node name="piso_estatico18" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(5180, 1108)
+
+[node name="piso_estatico20" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(5081, 1193)
+
+[node name="piso_estatico21" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(5181, 1193)
+
+[node name="piso_estatico19" parent="ui/piso" instance=ExtResource("2_1im3p")]
+position = Vector2(2387, 1229)
+
 [node name="piso_estatico6" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(-530, 1014)
 
@@ -270,14 +279,20 @@ position = Vector2(5619, 1012)
 [node name="PisoHoja4" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(4159, 224)
 
+[node name="PisoHoja17" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4518, 1293)
+
+[node name="PisoHoja18" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3791, 1598)
+
+[node name="PisoHoja19" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4774, 1535)
+
 [node name="PisoHoja5" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(4615, 428)
 
 [node name="PisoHoja6" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(4162, 606)
-
-[node name="PisoHoja3" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3022, 723)
 
 [node name="PisoHoja8" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(5118, 235)
@@ -294,11 +309,29 @@ position = Vector2(3759, 749)
 [node name="PisoHoja10" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(4493, 1095)
 
+[node name="PisoHoja" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(3574, 94)
+
+[node name="PisoHoja3" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(5074, 1351)
+
+[node name="PisoHoja12" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(1918, 444)
+
+[node name="PisoHoja13" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4033, 1477)
+
+[node name="PisoHoja14" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4302, 884)
+
+[node name="PisoHoja15" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(5092, 556)
+
+[node name="PisoHoja16" parent="ui/piso" instance=ExtResource("6_gsemg")]
+position = Vector2(4917, 987)
+
 [node name="PisoHoja11" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(3926, 1156)
-
-[node name="PisoHoja" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3029, 241)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1745, 1036)

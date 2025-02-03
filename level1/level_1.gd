@@ -21,7 +21,7 @@ func _ready() -> void:
 		return
 
 	# Llenar el array con las instancias de las partículas de viento
-	for i in range(10):  # Suponiendo que deseas 10 partículas de viento
+	for i in range(15):  # Suponiendo que deseas 10 partículas de viento
 		var wind_particle_instance = $ui.get_node("WindParticles" + str(i))  # Ajusta el nombre del nodo según corresponda
 		if wind_particle_instance and wind_particle_instance is CPUParticles2D:
 			wind_particles.append(wind_particle_instance)

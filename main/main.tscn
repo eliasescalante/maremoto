@@ -1,19 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ip73dlljecy8"]
+[gd_scene load_steps=4 format=3 uid="uid://ip73dlljecy8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5em6y"]
+[ext_resource type="Texture2D" uid="uid://dcwxqdxly1h7y" path="res://main/patanlla inicio.png" id="2_laypl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgatf"]
-font_size = 80
+font_size = 89
 font_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5em6y")
 
 [node name="ui" type="Node" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="ui"]
-offset_right = 1288.0
-offset_bottom = 722.0
 
 [node name="start" type="Button" parent="ui"]
 offset_left = 469.0
@@ -47,10 +44,16 @@ text = "SALIR"
 offset_left = 390.0
 offset_top = 85.0
 offset_right = 919.0
-offset_bottom = 200.0
-text = "SIN NOMBRE
+offset_bottom = 208.0
+text = "LA SEMILLA
 "
 label_settings = SubResource("LabelSettings_lgatf")
+horizontal_alignment = 1
+
+[node name="PatanllaInicio" type="Sprite2D" parent="."]
+position = Vector2(634, 357)
+scale = Vector2(0.628418, 0.677778)
+texture = ExtResource("2_laypl")
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ui/credits" to="." method="_on_credits_pressed"]

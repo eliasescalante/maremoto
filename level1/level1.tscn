@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=12 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
@@ -8,16 +8,24 @@
 [ext_resource type="PackedScene" uid="uid://cknx1fxwkhcm3" path="res://elementosDeNivel/arbol.tscn" id="5_v0vyo"]
 [ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
 [ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
+[ext_resource type="PackedScene" uid="uid://dif4ix42xgfro" path="res://elementosDeNivel/piso_enorme.tscn" id="8_2apl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
+size = Vector2(14933.8, 135)
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
 font_color = Color(1, 0.196078, 1, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
-size = Vector2(7701.5, 135)
-
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_tcse7")
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+position = Vector2(1128, 2487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4521.13, -684)
+shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="ui" type="Node" parent="."]
 
@@ -172,6 +180,58 @@ scale_amount_max = 5.0
 
 [node name="WindParticles5" type="CPUParticles2D" parent="ui"]
 position = Vector2(4955, 851)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles13" type="CPUParticles2D" parent="ui"]
+position = Vector2(7638, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles14" type="CPUParticles2D" parent="ui"]
+position = Vector2(9312, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles15" type="CPUParticles2D" parent="ui"]
+position = Vector2(11024, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles16" type="CPUParticles2D" parent="ui"]
+position = Vector2(12679, 870)
 emitting = false
 amount = 200
 lifetime = 8.0
@@ -440,6 +500,57 @@ position = Vector2(4917, 987)
 [node name="PisoHoja11" parent="ui/piso" instance=ExtResource("6_gsemg")]
 position = Vector2(3926, 1156)
 
+[node name="piso_estatico34" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+position = Vector2(9950, 1235)
+
+[node name="PisoEnorme" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(6537, 1240)
+
+[node name="PisoEnorme2" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(7757, 1391)
+
+[node name="PisoEnorme3" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(6540, 1593)
+
+[node name="PisoEnorme4" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(7760, 1598)
+
+[node name="PisoEnorme5" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(7936, 1240)
+
+[node name="PisoEnorme12" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(12134, 1386)
+
+[node name="PisoEnorme13" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(12129, 1623)
+
+[node name="PisoEnorme14" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(12321, 1235)
+
+[node name="PisoEnorme15" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(12523, 1628)
+
+[node name="PisoEnorme16" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(12523, 1235)
+
+[node name="PisoEnorme6" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(8984, 1598)
+
+[node name="PisoEnorme7" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(9155, 1381)
+
+[node name="PisoEnorme8" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(9372, 1235)
+
+[node name="PisoEnorme9" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(9372, 1613)
+
+[node name="PisoEnorme10" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(10904, 1235)
+
+[node name="PisoEnorme11" parent="ui" instance=ExtResource("8_2apl0")]
+position = Vector2(10904, 1623)
+
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1745, 1036)
 
@@ -447,12 +558,5 @@ position = Vector2(1745, 1036)
 wait_time = 3.0
 one_shot = true
 autostart = true
-
-[node name="StaticBody2D" type="Area2D" parent="."]
-position = Vector2(1128, 2487)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(905, -684)
-shape = SubResource("RectangleShape2D_lf4yh")
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]

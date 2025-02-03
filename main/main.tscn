@@ -26,13 +26,6 @@ offset_right = 822.0
 offset_bottom = 387.0
 text = "CREDITOS"
 
-[node name="options" type="Button" parent="ui"]
-offset_left = 471.0
-offset_top = 400.0
-offset_right = 820.0
-offset_bottom = 474.0
-text = "OPCIONES"
-
 [node name="salir" type="Button" parent="ui"]
 offset_left = 1087.0
 offset_top = 651.0
@@ -57,5 +50,4 @@ texture = ExtResource("2_laypl")
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ui/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="ui/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

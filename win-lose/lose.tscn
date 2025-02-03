@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlcs3snl3ru0u"]
+[gd_scene load_steps=4 format=3 uid="uid://dlcs3snl3ru0u"]
 
 [ext_resource type="Script" path="res://win-lose/lose.gd" id="1_5eet8"]
+[ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_b6hk2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1pnp"]
 font_size = 54
@@ -11,9 +12,10 @@ script = ExtResource("1_5eet8")
 
 [node name="ui" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="ui"]
-offset_right = 1285.0
-offset_bottom = 724.0
+[node name="CloseCurtain" type="Sprite2D" parent="ui"]
+position = Vector2(636.5, 367.5)
+scale = Vector2(0.635254, 0.689815)
+texture = ExtResource("2_b6hk2")
 
 [node name="Label" type="Label" parent="ui"]
 offset_left = 454.0

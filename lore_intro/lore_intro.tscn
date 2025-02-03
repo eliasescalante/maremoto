@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c85w4hbye2vm6"]
+[gd_scene load_steps=7 format=3 uid="uid://c85w4hbye2vm6"]
 
 [ext_resource type="Script" path="res://lore_intro/lore_intro.gd" id="1_b12xt"]
+[ext_resource type="Texture2D" uid="uid://buprr1wkmkqun" path="res://lore_intro/patanlla inicio.png" id="2_7ca6e"]
 
 [sub_resource type="Animation" id="Animation_uyx70"]
 length = 0.001
@@ -61,12 +62,10 @@ script = ExtResource("1_b12xt")
 
 [node name="ui" type="Node" parent="."]
 
-[node name="fondo" type="ColorRect" parent="ui"]
-offset_left = -10.0
-offset_top = -3.0
-offset_right = 1284.0
-offset_bottom = 724.0
-color = Color(0.260091, 0.386689, 0.383609, 1)
+[node name="fondo2" type="Sprite2D" parent="ui"]
+position = Vector2(638.5, 363.5)
+scale = Vector2(0.640137, 0.693519)
+texture = ExtResource("2_7ca6e")
 
 [node name="texto" type="RichTextLabel" parent="ui"]
 offset_left = 405.0

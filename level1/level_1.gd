@@ -2,8 +2,10 @@ extends Node2D
 
 @export var wind_force: float = -100.0  # Fuerza del viento (hacia la izquierda)
 @export var wind_duration: float = 1.0  # Duración del viento en segundos
-@export var wind_interval: float = 7.0  # Intervalo entre ráfagas
+@export var wind_interval: float = 6.0  # Intervalo entre ráfagas
 @export var lose_scene: String = "res://lose.tscn"  # Ruta de la escena de derrota
+@export var hoja_scene: PackedScene = preload("res://elementosDeNivel/piso_hoja.tscn")
+@onready var spawn_area: Area2D = $ui/Area2D  # Área donde aparecerán las hojas
 
 var is_wind_active: bool = false
 
@@ -14,6 +16,9 @@ var is_wind_active: bool = false
 @onready var wind_particles: Array = []
 
 func _ready() -> void:
+	# Instanciar múltiples hojas dentro del área
+	for i in range(5):  # Ajusta la cantidad de hojas
+		spawn_hoja()
 	$StaticBody2D.connect("body_entered", Callable(self, "_on_area2d_body_entered"))
 	# Verificar que los nodos existen
 	if not wind_timer or not player:
@@ -22,7 +27,7 @@ func _ready() -> void:
 
 	# Llenar el array con las instancias de las partículas de viento
 	for i in range(15):  # Suponiendo que deseas 10 partículas de viento
-		var wind_particle_instance = $ui.get_node("WindParticles" + str(i))  # Ajusta el nombre del nodo según corresponda
+		var wind_particle_instance = $ui/particulas.get_node("WindParticles" + str(i))  # Ajusta el nombre del nodo según corresponda
 		if wind_particle_instance and wind_particle_instance is CPUParticles2D:
 			wind_particles.append(wind_particle_instance)
 
@@ -72,3 +77,27 @@ func _on_area2d_body_entered(body: Node) -> void:
 	if body == player:
 		body.queue_free()  # Eliminar al jugador
 		get_tree().change_scene_to_file("res://win-lose/lose.tscn")
+
+func spawn_hoja():
+	if hoja_scene and spawn_area:
+		var hoja = hoja_scene.instantiate()
+		var spawn_position = get_random_spawn_position()
+		hoja.position = spawn_position
+		hoja.connect("tree_exited", Callable(self, "respawn_hoja"))
+		add_child(hoja)
+
+func get_random_spawn_position() -> Vector2:
+	# Obtener un punto aleatorio dentro del área de spawn
+	var rect = spawn_area.get_child(0) as CollisionShape2D
+	if rect:
+		var rect_global = rect.global_position
+		var rect_size = rect.shape.extents * 2  # Tamaño del área
+		var x = randf_range(rect_global.x, rect_global.x + rect_size.x)
+		var y = randf_range(rect_global.y, rect_global.y + rect_size.y)
+		return Vector2(x, y)
+	return Vector2.ZERO
+
+func respawn_hoja(hoja: Node2D):
+	await get_tree().create_timer(1.0).timeout  # Pequeña pausa antes de reaparecer
+	hoja.position = get_random_spawn_position()
+	add_child(hoja)

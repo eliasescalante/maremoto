@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=14 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
@@ -11,11 +11,17 @@
 [ext_resource type="PackedScene" uid="uid://dif4ix42xgfro" path="res://elementosDeNivel/piso_enorme.tscn" id="8_2apl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
-size = Vector2(14933.8, 135)
+size = Vector2(16331, 483.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_307ug"]
 font_size = 50
 font_color = Color(1, 0.196078, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llp3r"]
+size = Vector2(1916, 1855.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnbio"]
+size = Vector2(799, 2453)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_tcse7")
@@ -24,7 +30,7 @@ script = ExtResource("1_tcse7")
 position = Vector2(1128, 2487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4521.13, -684)
+position = Vector2(5105, -262)
 shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="ui" type="Node" parent="."]
@@ -32,8 +38,8 @@ shape = SubResource("RectangleShape2D_lf4yh")
 [node name="piso_fondo" type="Node" parent="ui"]
 
 [node name="Lvl1" type="Sprite2D" parent="ui/piso_fondo"]
-position = Vector2(5668, -892)
-scale = Vector2(7.29163, 6.40365)
+position = Vector2(6018, -954)
+scale = Vector2(7.46094, 6.44721)
 texture = ExtResource("7_j5yra")
 
 [node name="label_debug" type="Label" parent="ui"]
@@ -74,218 +80,10 @@ label_settings = SubResource("LabelSettings_307ug")
 [node name="Player" parent="ui" instance=ExtResource("1_ady08")]
 position = Vector2(95, 520)
 
-[node name="WindParticles" type="CPUParticles2D" parent="ui"]
-position = Vector2(897, 883)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles2" type="CPUParticles2D" parent="ui"]
-position = Vector2(2051, 888)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles9" type="CPUParticles2D" parent="ui"]
-position = Vector2(3744, 898)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles10" type="CPUParticles2D" parent="ui"]
-position = Vector2(5456, 917)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles11" type="CPUParticles2D" parent="ui"]
-position = Vector2(6545, 946)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles12" type="CPUParticles2D" parent="ui"]
-position = Vector2(6001, 925)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles3" type="CPUParticles2D" parent="ui"]
-position = Vector2(2969, 872)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles4" type="CPUParticles2D" parent="ui"]
-position = Vector2(3925, 856)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles5" type="CPUParticles2D" parent="ui"]
-position = Vector2(4955, 851)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles13" type="CPUParticles2D" parent="ui"]
-position = Vector2(7638, 870)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles14" type="CPUParticles2D" parent="ui"]
-position = Vector2(9312, 870)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles15" type="CPUParticles2D" parent="ui"]
-position = Vector2(11024, 870)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles16" type="CPUParticles2D" parent="ui"]
-position = Vector2(12679, 870)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles6" type="CPUParticles2D" parent="ui"]
-position = Vector2(5807, 1546)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles7" type="CPUParticles2D" parent="ui"]
-position = Vector2(3548, 1646)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
-[node name="WindParticles8" type="CPUParticles2D" parent="ui"]
-position = Vector2(1021, 1675)
-emitting = false
-amount = 200
-lifetime = 8.0
-direction = Vector2(-1, 0)
-spread = 6.92
-gravity = Vector2(0, 0)
-initial_velocity_min = 100.0
-initial_velocity_max = 500.0
-scale_amount_min = 5.0
-scale_amount_max = 5.0
-
 [node name="piso" type="Node" parent="ui"]
 
 [node name="PisoGrandeDoble" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-373, 1274)
+position = Vector2(-451, 1278)
 
 [node name="PisoGrandeDoble10" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(2643, 1274)
@@ -296,8 +94,11 @@ position = Vector2(2747, 1273)
 [node name="PisoGrandeDoble12" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(2643, 1650)
 
+[node name="PisoGrandeDoble22" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(2643, 1650)
+
 [node name="PisoGrandeDoble13" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2747, 1650)
+position = Vector2(5334, 1871)
 
 [node name="PisoGrandeDoble14" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(3295, 1272)
@@ -324,10 +125,10 @@ position = Vector2(5541, 1275)
 position = Vector2(5541, 1647)
 
 [node name="PisoGrandeDoble7" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(762, 1649)
+position = Vector2(794, 1649)
 
 [node name="PisoGrandeDoble9" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(762, 1649)
+position = Vector2(804, 1649)
 
 [node name="PisoGrandeDoble8" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(864, 1649)
@@ -336,227 +137,485 @@ position = Vector2(864, 1649)
 position = Vector2(864, 1270)
 
 [node name="PisoGrandeDoble5" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(765, 1268)
+position = Vector2(790, 1268)
 
 [node name="PisoGrandeDoble3" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(-375, 1646)
 
 [node name="PisoGrandeDoble2" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-16, 1274)
+position = Vector2(-35, 1278)
 
 [node name="PisoGrandeDoble4" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-13, 1646)
+position = Vector2(-34, 1646)
 
 [node name="piso_estatico3" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(378, 1016)
 
-[node name="piso_estatico23" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1165)
-
 [node name="piso_estatico24" parent="ui/piso" instance=ExtResource("2_1im3p")]
 position = Vector2(377, 1243)
 
-[node name="piso_estatico25" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1323)
+[node name="piso_1" type="Node2D" parent="ui/piso"]
 
-[node name="piso_estatico26" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1403)
-
-[node name="piso_estatico27" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1473)
-
-[node name="piso_estatico28" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1552)
-
-[node name="piso_estatico29" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1631)
-
-[node name="piso_estatico30" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1710)
-
-[node name="piso_estatico33" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1831)
-
-[node name="piso_estatico31" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(375, 1775)
-
-[node name="piso_estatico32" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(375, 1775)
-
-[node name="piso_estatico" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(52, 1014)
-
-[node name="piso_estatico22" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(378, 1097)
-
-[node name="piso_estatico17" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(3635, 1292)
-
-[node name="piso_estatico18" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(5180, 1108)
-
-[node name="piso_estatico20" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(5081, 1193)
-
-[node name="piso_estatico21" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(5181, 1193)
-
-[node name="piso_estatico19" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(2387, 1229)
-
-[node name="piso_estatico6" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(-530, 1014)
-
-[node name="piso_estatico2" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(142, 1014)
-
-[node name="piso_estatico4" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(-124, 1014)
-
-[node name="piso_estatico7" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(685, 1020)
-
-[node name="piso_estatico8" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(941, 1020)
-
-[node name="piso_estatico9" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(2566, 1017)
-
-[node name="piso_estatico10" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(2825, 1017)
-
-[node name="piso_estatico11" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(3214, 1016)
-
-[node name="piso_estatico5" parent="ui/piso" instance=ExtResource("3_yq7hq")]
-position = Vector2(-381, 1014)
-
-[node name="piso_estatico12" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+[node name="piso_estatico12" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
 position = Vector2(3467, 1017)
 
-[node name="piso_estatico13" parent="ui/piso" instance=ExtResource("2_1im3p")]
+[node name="piso_estatico13" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(422, 1110)
 
-[node name="piso_estatico14" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(-107, 934)
+[node name="piso_estatico14" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(41, 1017)
 
-[node name="piso_estatico15" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+[node name="piso_estatico24" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(-275, 938)
+
+[node name="piso_estatico15" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
 position = Vector2(5364, 1010)
 
-[node name="piso_estatico16" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+[node name="piso_estatico16" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
 position = Vector2(5619, 1012)
 
-[node name="PisoHoja4" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4159, 224)
-
-[node name="PisoHoja17" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4518, 1293)
-
-[node name="PisoHoja18" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3791, 1598)
-
-[node name="PisoHoja19" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4774, 1535)
-
-[node name="PisoHoja5" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4615, 428)
-
-[node name="PisoHoja6" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4162, 606)
-
-[node name="PisoHoja8" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(5118, 235)
-
-[node name="PisoHoja2" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3709, 413)
-
-[node name="PisoHoja7" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4903, 769)
-
-[node name="PisoHoja9" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3759, 749)
-
-[node name="PisoHoja10" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4493, 1095)
-
-[node name="PisoHoja" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3574, 94)
-
-[node name="PisoHoja3" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(5074, 1351)
-
-[node name="PisoHoja13" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4033, 1477)
-
-[node name="PisoHoja14" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4302, 884)
-
-[node name="PisoHoja15" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(5092, 556)
-
-[node name="PisoHoja16" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(4917, 987)
-
-[node name="PisoHoja11" parent="ui/piso" instance=ExtResource("6_gsemg")]
-position = Vector2(3926, 1156)
-
-[node name="piso_estatico34" parent="ui/piso" instance=ExtResource("3_yq7hq")]
+[node name="piso_estatico34" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
 position = Vector2(9950, 1235)
 
-[node name="PisoEnorme" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="piso_estatico2" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(-17, 1018)
+
+[node name="piso_estatico4" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(-184, 1018)
+
+[node name="piso_estatico7" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(710, 1021)
+
+[node name="piso_estatico8" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(941, 1021)
+
+[node name="piso_estatico9" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(2566, 1017)
+
+[node name="piso_estatico10" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(2825, 1017)
+
+[node name="piso_estatico11" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(3214, 1016)
+
+[node name="piso_estatico5" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
+position = Vector2(-445, 1017)
+
+[node name="piso_estatico" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(122, 1017)
+
+[node name="piso_estatico22" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1097)
+rotation = 3.14159
+
+[node name="piso_estatico17" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(3635, 1292)
+
+[node name="piso_estatico18" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(5180, 1108)
+
+[node name="piso_estatico20" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(5081, 1193)
+
+[node name="piso_estatico21" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(5181, 1193)
+
+[node name="piso_estatico19" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(2387, 1229)
+
+[node name="piso_estatico25" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1321)
+
+[node name="piso_estatico26" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1403)
+
+[node name="piso_estatico27" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1473)
+
+[node name="piso_estatico28" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1552)
+
+[node name="piso_estatico29" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1631)
+
+[node name="piso_estatico30" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1710)
+
+[node name="piso_estatico33" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1831)
+
+[node name="piso_estatico31" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(375, 1775)
+
+[node name="piso_estatico32" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(375, 1775)
+
+[node name="PisoEnorme" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(6537, 1240)
 
-[node name="PisoEnorme2" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme2" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(7757, 1391)
 
-[node name="PisoEnorme3" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme3" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(6540, 1593)
 
-[node name="PisoEnorme4" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme4" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(7760, 1598)
 
-[node name="PisoEnorme5" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme5" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(7936, 1240)
 
-[node name="PisoEnorme12" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme12" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(12134, 1386)
 
-[node name="PisoEnorme13" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme13" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(12129, 1623)
 
-[node name="PisoEnorme14" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme14" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(12321, 1235)
 
-[node name="PisoEnorme15" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme15" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(12523, 1628)
 
-[node name="PisoEnorme16" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme16" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(12523, 1235)
 
-[node name="PisoEnorme6" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme6" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(8984, 1598)
 
-[node name="PisoEnorme7" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme7" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(9155, 1381)
 
-[node name="PisoEnorme8" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme8" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(9372, 1235)
 
-[node name="PisoEnorme9" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme9" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(9372, 1613)
 
-[node name="PisoEnorme10" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme10" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(10904, 1235)
 
-[node name="PisoEnorme11" parent="ui" instance=ExtResource("8_2apl0")]
+[node name="PisoEnorme11" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(10904, 1623)
+
+[node name="piso_estatico6" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(-608, 1018)
+
+[node name="piso_estatico23" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
+position = Vector2(377, 1165)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1745, 1036)
+
+[node name="Area2D" type="Area2D" parent="ui"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
+position = Vector2(4398, 1076)
+shape = SubResource("RectangleShape2D_llp3r")
+
+[node name="PisoHoja" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3719, 214)
+
+[node name="PisoHoja3" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4880, 1794)
+
+[node name="PisoHoja23" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3425, 500)
+
+[node name="PisoHoja2" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4708, 379)
+
+[node name="PisoHoja4" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4175, 410)
+
+[node name="PisoHoja5" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4893, 955)
+
+[node name="PisoHoja6" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3772, 682)
+
+[node name="PisoHoja7" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4430, 809)
+
+[node name="PisoHoja19" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4014, 1220)
+
+[node name="PisoHoja20" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4765, 1398)
+
+[node name="PisoHoja26" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4295, 1323)
+
+[node name="PisoHoja27" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4569, 1159)
+
+[node name="PisoHoja28" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3949, 970)
+
+[node name="PisoHoja24" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(5317, 494)
+
+[node name="PisoHoja21" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4385, 1561)
+
+[node name="PisoHoja25" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3824, 1628)
+
+[node name="PisoHoja22" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3397, -135)
+
+[node name="PisoHoja8" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3500, -1290)
+
+[node name="PisoHoja9" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4300, -1124)
+
+[node name="PisoHoja10" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(5048, -1252)
+
+[node name="PisoHoja11" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3893, -791)
+
+[node name="PisoHoja13" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3626, -435)
+
+[node name="PisoHoja14" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4394, -429)
+
+[node name="PisoHoja15" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(5213, -169)
+
+[node name="PisoHoja16" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4064, -86)
+
+[node name="PisoHoja17" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4769, 92)
+
+[node name="PisoHoja18" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3918, -1508)
+
+[node name="PisoHoja12" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4784, -693)
+
+[node name="particulas" type="Node2D" parent="ui"]
+
+[node name="WindParticles" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(897, 883)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles2" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(2051, 888)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles9" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(3744, 898)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles10" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(5456, 917)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles11" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(6545, 946)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles12" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(6001, 925)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles3" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(2969, 872)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles4" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(3925, 856)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles5" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(4955, 851)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles13" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(7638, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles14" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(9312, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles15" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(11024, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles16" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(12679, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles6" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(5807, 1546)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles7" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(3548, 1646)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles8" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(1021, 1675)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
 
 [node name="WindTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-1003, 696)
+shape = SubResource("RectangleShape2D_lnbio")
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]

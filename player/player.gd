@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 200  # Velocidad base
-@export var jump_strength: float = 650  # Fuerza del salto
+@export var jump_strength: float = 700  # Fuerza del salto
 @export var lose_scene: String = "res://lose.tscn"  # Escena de derrota
 
 @onready var sprite = $Sprite2D/AnimatedSprite2D

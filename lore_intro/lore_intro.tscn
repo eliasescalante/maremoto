@@ -36,7 +36,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_h8hju"]
 resource_name = "fondito2"
-length = 10.0
+length = 12.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -44,7 +44,7 @@ tracks/0/path = NodePath("ui/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 9.93333),
+"times": PackedFloat32Array(0, 12.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.0235294, 0.0235294, 0.0235294, 0), Color(0.0235294, 0.0235294, 0.0235294, 1)]
@@ -73,7 +73,12 @@ offset_top = 170.0
 offset_right = 870.0
 offset_bottom = 603.0
 bbcode_enabled = true
-text = "lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. lorem	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+text = "El viento te trajo hasta acá. Antes, el mundo era un lugar verde y lleno de vida. Ahora, solo queda polvo y silencio.
+Sos la última semilla viva, pequeña pero valiente. Si te detenés, serás parte del olvido. Pero si avanzás, si encontrás tierra fértil, podés hacer que todo vuelva a empezar.
+No va a ser fácil, el suelo resquebrajado dificulta tu avance, el viento intenta arrastrarte, las aves no distinguen entre vos y su alimento.
+Cada estación traerá nuevas pruebas, pero también esperanza.
+Saltá, esquivá, resistí. Tu viaje comienza hoy…
+"
 tab_size = 6
 
 [node name="ColorRect" type="ColorRect" parent="ui"]

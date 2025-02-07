@@ -1,20 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://l3alnotbf4f"]
 
 [ext_resource type="Script" path="res://elementosDeNivel/piso_hoja.gd" id="1_ghwur"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_651te"]
-size = Vector2(177, 58)
+[ext_resource type="Texture2D" uid="uid://2f5mxpmhbond" path="res://elementosDeNivel/platformleaft.png" id="2_yla00"]
 
 [node name="PisoHoja" type="CharacterBody2D"]
 script = ExtResource("1_ghwur")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -88.0
-offset_top = -29.0
-offset_right = 89.0
-offset_bottom = 30.0
-color = Color(0.431373, 1, 0.0901961, 1)
+[node name="Platformleaft" type="Sprite2D" parent="."]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(0.203825, 0.200868)
+texture = ExtResource("2_yla00")
+region_enabled = true
+region_rect = Rect2(47.5598, 122.625, 870.083, 320.681)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_651te")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, -26, -38, -29, -55, -17, -64, 0, -73, 10, -88, 17, -86, 18, -64, 14, -17, 22, 36, 29, 66, 21, 87, -9, 78, -10, 41, -18)

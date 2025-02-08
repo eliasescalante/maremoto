@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c85w4hbye2vm6"]
+[gd_scene load_steps=8 format=3 uid="uid://c85w4hbye2vm6"]
 
 [ext_resource type="Script" path="res://lore_intro/lore_intro.gd" id="1_b12xt"]
 [ext_resource type="Texture2D" uid="uid://buprr1wkmkqun" path="res://lore_intro/patanlla inicio.png" id="2_7ca6e"]
+[ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="3_ljttv"]
 
 [sub_resource type="Animation" id="Animation_uyx70"]
 length = 0.001
@@ -68,10 +69,12 @@ scale = Vector2(0.640137, 0.693519)
 texture = ExtResource("2_7ca6e")
 
 [node name="texto" type="RichTextLabel" parent="ui"]
-offset_left = 405.0
-offset_top = 170.0
-offset_right = 870.0
-offset_bottom = 603.0
+offset_left = 215.0
+offset_top = 91.0
+offset_right = 1035.0
+offset_bottom = 657.0
+theme_override_fonts/normal_font = ExtResource("3_ljttv")
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "El viento te trajo hasta acá. Antes, el mundo era un lugar verde y lleno de vida. Ahora, solo queda polvo y silencio.
 Sos la última semilla viva, pequeña pero valiente. Si te detenés, serás parte del olvido. Pero si avanzás, si encontrás tierra fértil, podés hacer que todo vuelva a empezar.

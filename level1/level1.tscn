@@ -30,7 +30,7 @@ script = ExtResource("1_tcse7")
 position = Vector2(1128, 2487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(5105, -262)
+position = Vector2(4948, -376)
 shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="ui" type="Node" parent="."]
@@ -97,8 +97,14 @@ position = Vector2(2643, 1650)
 [node name="PisoGrandeDoble22" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(2643, 1650)
 
+[node name="PisoGrandeDoble26" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(2643, 2037)
+
 [node name="PisoGrandeDoble13" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(5334, 1871)
+
+[node name="PisoGrandeDoble28" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(5328, 2068)
 
 [node name="PisoGrandeDoble14" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(3295, 1272)
@@ -111,6 +117,9 @@ position = Vector2(3297, 1647)
 
 [node name="PisoGrandeDoble17" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(3389, 1643)
+
+[node name="PisoGrandeDoble27" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(3395, 2056)
 
 [node name="PisoGrandeDoble18" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(5441, 1271)
@@ -133,6 +142,9 @@ position = Vector2(804, 1649)
 [node name="PisoGrandeDoble8" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(864, 1649)
 
+[node name="PisoGrandeDoble25" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(870, 2005)
+
 [node name="PisoGrandeDoble6" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(864, 1270)
 
@@ -141,6 +153,12 @@ position = Vector2(790, 1268)
 
 [node name="PisoGrandeDoble3" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(-375, 1646)
+
+[node name="PisoGrandeDoble23" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(-375, 2002)
+
+[node name="PisoGrandeDoble24" parent="ui/piso" instance=ExtResource("4_250m2")]
+position = Vector2(-38, 2002)
 
 [node name="PisoGrandeDoble2" parent="ui/piso" instance=ExtResource("4_250m2")]
 position = Vector2(-35, 1278)
@@ -305,7 +323,7 @@ position = Vector2(-608, 1018)
 position = Vector2(377, 1165)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
-position = Vector2(1745, 1036)
+position = Vector2(1789, 991)
 
 [node name="Area2D" type="Area2D" parent="ui"]
 
@@ -315,12 +333,6 @@ shape = SubResource("RectangleShape2D_llp3r")
 
 [node name="PisoHoja" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(3719, 214)
-
-[node name="PisoHoja3" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(4880, 1794)
-
-[node name="PisoHoja23" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(3425, 500)
 
 [node name="PisoHoja2" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(4708, 379)
@@ -346,6 +358,15 @@ position = Vector2(4765, 1398)
 [node name="PisoHoja26" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(4295, 1323)
 
+[node name="PisoHoja29" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(3870, 1488)
+
+[node name="PisoHoja30" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4175, 624)
+
+[node name="PisoHoja31" parent="ui" instance=ExtResource("6_gsemg")]
+position = Vector2(4873, 681)
+
 [node name="PisoHoja27" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(4569, 1159)
 
@@ -357,12 +378,6 @@ position = Vector2(5317, 494)
 
 [node name="PisoHoja21" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(4385, 1561)
-
-[node name="PisoHoja25" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(3824, 1628)
-
-[node name="PisoHoja22" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(3397, -135)
 
 [node name="PisoHoja8" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(3500, -1290)

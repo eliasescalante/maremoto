@@ -174,53 +174,20 @@ position = Vector2(377, 1243)
 
 [node name="piso_1" type="Node2D" parent="ui/piso"]
 
-[node name="piso_estatico12" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(3467, 1017)
-
 [node name="piso_estatico13" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(422, 1110)
 
-[node name="piso_estatico14" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(41, 1017)
-
 [node name="piso_estatico24" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(-275, 938)
+position = Vector2(-267, 1021)
 
 [node name="piso_estatico15" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(5364, 1010)
+position = Vector2(5364, 1014)
 
 [node name="piso_estatico16" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(5619, 1012)
+position = Vector2(5619, 1014)
 
 [node name="piso_estatico34" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
 position = Vector2(9950, 1235)
-
-[node name="piso_estatico2" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(-17, 1018)
-
-[node name="piso_estatico4" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(-184, 1018)
-
-[node name="piso_estatico7" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(710, 1021)
-
-[node name="piso_estatico8" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(941, 1021)
-
-[node name="piso_estatico9" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(2566, 1017)
-
-[node name="piso_estatico10" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(2825, 1017)
-
-[node name="piso_estatico11" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(3214, 1016)
-
-[node name="piso_estatico5" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(-445, 1017)
-
-[node name="piso_estatico" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(122, 1017)
 
 [node name="piso_estatico22" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(377, 1097)
@@ -230,7 +197,7 @@ rotation = 3.14159
 position = Vector2(3635, 1292)
 
 [node name="piso_estatico18" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(5180, 1108)
+position = Vector2(5195, 1108)
 
 [node name="piso_estatico20" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(5081, 1193)
@@ -316,19 +283,13 @@ position = Vector2(10904, 1235)
 [node name="PisoEnorme11" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(10904, 1623)
 
-[node name="piso_estatico6" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(-608, 1018)
-
 [node name="piso_estatico23" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(377, 1165)
-
-[node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
-position = Vector2(1789, 991)
 
 [node name="Area2D" type="Area2D" parent="ui"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
-position = Vector2(4398, 1076)
+position = Vector2(4054, 1072)
 shape = SubResource("RectangleShape2D_llp3r")
 
 [node name="PisoHoja" parent="ui" instance=ExtResource("6_gsemg")]
@@ -411,6 +372,9 @@ position = Vector2(3918, -1508)
 
 [node name="PisoHoja12" parent="ui" instance=ExtResource("6_gsemg")]
 position = Vector2(4784, -693)
+
+[node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
+position = Vector2(1977, 1166)
 
 [node name="particulas" type="Node2D" parent="ui"]
 

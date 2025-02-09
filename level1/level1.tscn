@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=13 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
@@ -10,28 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
 [ext_resource type="PackedScene" uid="uid://dif4ix42xgfro" path="res://elementosDeNivel/piso_enorme.tscn" id="8_2apl0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llp3r"]
+size = Vector2(7359.85, 1855.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
 size = Vector2(16331, 483.5)
-
-[sub_resource type="LabelSettings" id="LabelSettings_307ug"]
-font_size = 50
-font_color = Color(1, 0.196078, 1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llp3r"]
-size = Vector2(1916, 1855.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnbio"]
 size = Vector2(799, 2453)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_tcse7")
-
-[node name="StaticBody2D" type="Area2D" parent="."]
-position = Vector2(1128, 2487)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4948, -376)
-shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="ui" type="Node" parent="."]
 
@@ -41,41 +30,6 @@ shape = SubResource("RectangleShape2D_lf4yh")
 position = Vector2(6018, -954)
 scale = Vector2(7.46094, 6.44721)
 texture = ExtResource("7_j5yra")
-
-[node name="label_debug" type="Label" parent="ui"]
-offset_left = 575.0
-offset_top = 253.0
-offset_right = 732.0
-offset_bottom = 322.0
-text = "cuadrante 1"
-label_settings = SubResource("LabelSettings_307ug")
-
-[node name="label_debug" type="Label" parent="ui/label_debug"]
-layout_mode = 0
-offset_left = 1345.0
-offset_top = 7.0
-offset_right = 1634.0
-offset_bottom = 76.0
-text = "cuadrante 2"
-label_settings = SubResource("LabelSettings_307ug")
-
-[node name="label_debug" type="Label" parent="ui/label_debug/label_debug"]
-layout_mode = 0
-offset_left = 1345.0
-offset_top = 7.0
-offset_right = 1634.0
-offset_bottom = 76.0
-text = "cuadrante 3"
-label_settings = SubResource("LabelSettings_307ug")
-
-[node name="label_debug" type="Label" parent="ui/label_debug/label_debug/label_debug"]
-layout_mode = 0
-offset_left = 1345.0
-offset_top = 7.0
-offset_right = 1634.0
-offset_bottom = 76.0
-text = "cuadrante 4"
-label_settings = SubResource("LabelSettings_307ug")
 
 [node name="Player" parent="ui" instance=ExtResource("1_ady08")]
 position = Vector2(95, 520)
@@ -286,95 +240,93 @@ position = Vector2(10904, 1623)
 [node name="piso_estatico23" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(377, 1165)
 
-[node name="Area2D" type="Area2D" parent="ui"]
+[node name="hojas" type="Node" parent="ui"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
-position = Vector2(4054, 1072)
-shape = SubResource("RectangleShape2D_llp3r")
-
-[node name="PisoHoja" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3719, 214)
 
-[node name="PisoHoja2" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja2" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4708, 379)
 
-[node name="PisoHoja4" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja4" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4175, 410)
 
-[node name="PisoHoja5" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja5" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4893, 955)
 
-[node name="PisoHoja6" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja6" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3772, 682)
 
-[node name="PisoHoja7" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja7" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4430, 809)
 
-[node name="PisoHoja19" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja19" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4014, 1220)
 
-[node name="PisoHoja20" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja20" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4765, 1398)
 
-[node name="PisoHoja26" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja26" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4295, 1323)
 
-[node name="PisoHoja29" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja29" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3870, 1488)
 
-[node name="PisoHoja30" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja30" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4175, 624)
 
-[node name="PisoHoja31" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja31" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4873, 681)
 
-[node name="PisoHoja27" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja27" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4569, 1159)
 
-[node name="PisoHoja28" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja28" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3949, 970)
 
-[node name="PisoHoja24" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(5317, 494)
-
-[node name="PisoHoja21" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja21" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4385, 1561)
 
-[node name="PisoHoja8" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja8" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3500, -1290)
 
-[node name="PisoHoja9" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja9" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4300, -1124)
 
-[node name="PisoHoja10" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja10" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(5048, -1252)
 
-[node name="PisoHoja11" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja11" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3893, -791)
 
-[node name="PisoHoja13" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja13" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3626, -435)
 
-[node name="PisoHoja14" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja14" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4394, -429)
 
-[node name="PisoHoja15" parent="ui" instance=ExtResource("6_gsemg")]
-position = Vector2(5213, -169)
-
-[node name="PisoHoja16" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja16" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4064, -86)
 
-[node name="PisoHoja17" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja17" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4769, 92)
 
-[node name="PisoHoja18" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja18" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3918, -1508)
 
-[node name="PisoHoja12" parent="ui" instance=ExtResource("6_gsemg")]
+[node name="PisoHoja12" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4784, -693)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1977, 1166)
+
+[node name="Area2D" type="Area2D" parent="ui"]
+position = Vector2(9208.01, -8.47998)
+rotation = -0.00229513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
+position = Vector2(478.654, 558.497)
+shape = SubResource("RectangleShape2D_llp3r")
 
 [node name="particulas" type="Node2D" parent="ui"]
 
@@ -585,6 +537,13 @@ initial_velocity_min = 100.0
 initial_velocity_max = 500.0
 scale_amount_min = 5.0
 scale_amount_max = 5.0
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+position = Vector2(1128, 2487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4948, -376)
+shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="WindTimer" type="Timer" parent="."]
 wait_time = 3.0

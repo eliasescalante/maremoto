@@ -1,3 +1,103 @@
-[gd_scene format=3 uid="uid://ehit2y6t53yr"]
+[gd_scene load_steps=15 format=3 uid="uid://ehit2y6t53yr"]
 
-[node name="Planta" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://2725tucrd4gj" path="res://elementosDeNivel/spritesheet planta que rueda.png" id="1_bgqts"]
+[ext_resource type="Script" path="res://elementosDeNivel/planta.gd" id="1_ryot1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjfio"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(0, 0, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8gtk"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(333, 0, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02jtm"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(666, 0, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjokj"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(0, 292, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7ppf"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(333, 292, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hbek"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(666, 292, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_871bp"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(0, 584, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_disj7"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(333, 584, 333, 292)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63bvb"]
+atlas = ExtResource("1_bgqts")
+region = Rect2(666, 584, 333, 292)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wd3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjfio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8gtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02jtm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjokj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7ppf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hbek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_871bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_disj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63bvb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iw6ht"]
+radius = 108.19
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5uab"]
+radius = 89.9389
+
+[node name="Planta" type="CharacterBody2D"]
+script = ExtResource("1_ryot1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.00534813
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_0wd3o")
+frame_progress = 0.908457
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = -2.69634
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_iw6ht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -10)
+rotation = -0.627622
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_a5uab")

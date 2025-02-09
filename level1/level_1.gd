@@ -16,9 +16,6 @@ var is_wind_active: bool = false
 @onready var wind_particles: Array = []
 
 func _ready() -> void:
-	# Instanciar múltiples hojas dentro del área
-	for i in range(5):  # Ajusta la cantidad de hojas
-		spawn_hoja()
 	$StaticBody2D.connect("body_entered", Callable(self, "_on_area2d_body_entered"))
 	# Verificar que los nodos existen
 	if not wind_timer or not player:
@@ -38,7 +35,7 @@ func _ready() -> void:
 
 	# Conectar la señal "timeout" al método correspondiente
 	wind_timer.connect("timeout", Callable(self, "_on_wind_timer_timeout"))
-
+	
 func _on_wind_timer_timeout() -> void:
 	if not is_wind_active:
 		is_wind_active = true
@@ -77,27 +74,3 @@ func _on_area2d_body_entered(body: Node) -> void:
 	if body == player:
 		body.queue_free()  # Eliminar al jugador
 		get_tree().change_scene_to_file("res://win-lose/lose.tscn")
-
-func spawn_hoja():
-	if hoja_scene and spawn_area:
-		var hoja = hoja_scene.instantiate()
-		var spawn_position = get_random_spawn_position()
-		hoja.position = spawn_position
-		hoja.connect("tree_exited", Callable(self, "respawn_hoja"))
-		add_child(hoja)
-
-func get_random_spawn_position() -> Vector2:
-	# Obtener un punto aleatorio dentro del área de spawn
-	var rect = spawn_area.get_child(0) as CollisionShape2D
-	if rect:
-		var rect_global = rect.global_position
-		var rect_size = rect.shape.extents * 2  # Tamaño del área
-		var x = randf_range(rect_global.x, rect_global.x + rect_size.x)
-		var y = randf_range(rect_global.y, rect_global.y + rect_size.y)
-		return Vector2(x, y)
-	return Vector2.ZERO
-
-func respawn_hoja(hoja: Node2D):
-	await get_tree().create_timer(1.0).timeout  # Pequeña pausa antes de reaparecer
-	hoja.position = get_random_spawn_position()
-	add_child(hoja)

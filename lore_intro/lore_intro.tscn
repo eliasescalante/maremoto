@@ -1,8 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://c85w4hbye2vm6"]
+[gd_scene load_steps=12 format=3 uid="uid://c85w4hbye2vm6"]
 
 [ext_resource type="Script" path="res://lore_intro/lore_intro.gd" id="1_b12xt"]
 [ext_resource type="Texture2D" uid="uid://buprr1wkmkqun" path="res://lore_intro/patanlla inicio.png" id="2_7ca6e"]
 [ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="3_ljttv"]
+[ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="4_s87mx"]
+[ext_resource type="Texture2D" uid="uid://dhwu8yukj3owb" path="res://main/start buttom.png" id="5_ofj2q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bybs8"]
+texture = ExtResource("4_s87mx")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6dpf"]
+texture = ExtResource("5_ofj2q")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
 
 [sub_resource type="Animation" id="Animation_uyx70"]
 length = 0.001
@@ -99,6 +115,8 @@ offset_right = 1234.0
 offset_bottom = 681.0
 theme_override_fonts/font = ExtResource("3_ljttv")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_bybs8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p6dpf")
 text = "Saltar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

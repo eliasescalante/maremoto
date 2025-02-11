@@ -1,12 +1,54 @@
-[gd_scene format=3 uid="uid://con2silr7sj0f"]
+[gd_scene load_steps=6 format=3 uid="uid://con2silr7sj0f"]
+
+[ext_resource type="Script" path="res://credits/credits.gd" id="1_wrqmq"]
+[ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="2_l1rsi"]
+[ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="3_3hswl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t5hfv"]
+font = ExtResource("2_l1rsi")
+font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_61oog"]
+font = ExtResource("2_l1rsi")
+font_size = 54
 
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_wrqmq")
 
 [node name="ui" type="Node" parent="."]
 
 [node name="titulo" type="Label" parent="ui"]
-offset_left = 425.0
-offset_top = 227.0
-offset_right = 502.0
-offset_bottom = 250.0
-text = "CREDITOS"
+offset_left = 54.0
+offset_top = 45.0
+offset_right = 404.0
+offset_bottom = 201.0
+text = "GRACIAS POR JUGAR"
+label_settings = SubResource("LabelSettings_t5hfv")
+
+[node name="team" type="Label" parent="ui"]
+offset_left = 110.0
+offset_top = 233.0
+offset_right = 902.0
+offset_bottom = 584.0
+text = "Game design : Fernanda Di Zoccolo 
+Arte: Luciana 
+QA: Mariano Di Zoccolo
+Programación : Elias Escalante
+"
+label_settings = SubResource("LabelSettings_61oog")
+
+[node name="Button" type="Button" parent="ui"]
+offset_left = 975.0
+offset_top = 609.0
+offset_right = 1172.0
+offset_bottom = 678.0
+theme_override_fonts/font = ExtResource("2_l1rsi")
+theme_override_font_sizes/font_size = 43
+text = "Atras"
+
+[node name="CloseCurtain" type="Sprite2D" parent="."]
+position = Vector2(634, 355)
+scale = Vector2(0.648804, 0.699074)
+texture = ExtResource("3_3hswl")
+
+[connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]

@@ -231,11 +231,17 @@ position = Vector2(9372, 1235)
 [node name="PisoEnorme9" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
 position = Vector2(9372, 1613)
 
+[node name="PisoEnorme17" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
+position = Vector2(9372, 1997)
+
 [node name="PisoEnorme10" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(10904, 1235)
+position = Vector2(10840, 1232)
 
 [node name="PisoEnorme11" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(10904, 1623)
+position = Vector2(10912, 1623)
+
+[node name="PisoEnorme18" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
+position = Vector2(10912, 2007)
 
 [node name="piso_estatico23" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
 position = Vector2(377, 1165)
@@ -325,7 +331,7 @@ position = Vector2(9208.01, -8.47998)
 rotation = -0.00229513
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
-position = Vector2(478.654, 558.497)
+position = Vector2(390.141, 806.378)
 shape = SubResource("RectangleShape2D_llp3r")
 
 [node name="particulas" type="Node2D" parent="ui"]
@@ -475,6 +481,19 @@ scale_amount_max = 5.0
 
 [node name="WindParticles15" type="CPUParticles2D" parent="ui/particulas"]
 position = Vector2(11024, 870)
+emitting = false
+amount = 200
+lifetime = 8.0
+direction = Vector2(-1, 0)
+spread = 6.92
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+
+[node name="WindParticles17" type="CPUParticles2D" parent="ui/particulas"]
+position = Vector2(12008, 870)
 emitting = false
 amount = 200
 lifetime = 8.0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ip73dlljecy8"]
+[gd_scene load_steps=5 format=3 uid="uid://ip73dlljecy8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5em6y"]
+[ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="2_jler0"]
 [ext_resource type="Texture2D" uid="uid://dcwxqdxly1h7y" path="res://main/patanlla inicio.png" id="2_laypl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgatf"]
@@ -17,6 +18,8 @@ offset_left = 469.0
 offset_top = 222.0
 offset_right = 822.0
 offset_bottom = 296.0
+theme_override_fonts/font = ExtResource("2_jler0")
+theme_override_font_sizes/font_size = 35
 text = "START"
 
 [node name="credits" type="Button" parent="ui"]
@@ -24,6 +27,8 @@ offset_left = 469.0
 offset_top = 313.0
 offset_right = 822.0
 offset_bottom = 387.0
+theme_override_fonts/font = ExtResource("2_jler0")
+theme_override_font_sizes/font_size = 35
 text = "CREDITOS"
 
 [node name="salir" type="Button" parent="ui"]
@@ -31,6 +36,8 @@ offset_left = 1087.0
 offset_top = 651.0
 offset_right = 1258.0
 offset_bottom = 706.0
+theme_override_fonts/font = ExtResource("2_jler0")
+theme_override_font_sizes/font_size = 35
 text = "SALIR"
 
 [node name="Label" type="Label" parent="ui"]

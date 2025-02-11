@@ -19,3 +19,7 @@ func _on_animation_finished(anim_name: String) -> void:
 # Cambiar a otra escena.
 func _change_scene() -> void:
 	get_tree().change_scene_to_file("res://level1/level1.tscn")
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://level1/level1.tscn")

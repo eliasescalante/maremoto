@@ -92,7 +92,18 @@ offset_right = 1292.0
 offset_bottom = 727.0
 color = Color(0.0235294, 0.0235294, 0.0235294, 1)
 
+[node name="Button" type="Button" parent="ui"]
+offset_left = 997.0
+offset_top = 584.0
+offset_right = 1234.0
+offset_bottom = 681.0
+theme_override_fonts/font = ExtResource("3_ljttv")
+theme_override_font_sizes/font_size = 35
+text = "Saltar"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_74kqt")
 }
+
+[connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]

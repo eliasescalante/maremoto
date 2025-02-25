@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfgcin0cec473"]
+[gd_scene load_steps=3 format=3 uid="uid://cfgcin0cec473"]
+
+[ext_resource type="Texture2D" uid="uid://ckbu8erprlry1" path="res://elementosDeNivel/tilesand4.png" id="1_rncya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qw63"]
-size = Vector2(415, 446)
+size = Vector2(317, 864)
 
 [node name="PisoGrandeDoble" type="StaticBody2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -209.0
-offset_top = -220.0
-offset_right = 208.0
-offset_bottom = 225.0
-color = Color(0.807843, 0.517647, 0.180392, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(2.5, 3)
 shape = SubResource("RectangleShape2D_1qw63")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 1.00002)
+scale = Vector2(0.344258, 0.933098)
+texture = ExtResource("1_rncya")

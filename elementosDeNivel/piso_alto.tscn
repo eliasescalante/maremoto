@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dif4ix42xgfro"]
+
+[ext_resource type="Texture2D" uid="uid://ckbu8erprlry1" path="res://elementosDeNivel/tilesand4.png" id="1_vkthe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x52xy"]
+size = Vector2(706, 838)
+
+[node name="PisoEnorme" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 6)
+shape = SubResource("RectangleShape2D_x52xy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 1)
+scale = Vector2(0.770314, 0.912784)
+texture = ExtResource("1_vkthe")

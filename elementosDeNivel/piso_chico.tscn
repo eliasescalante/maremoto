@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://rtyasefaddg3"]
+
+[ext_resource type="Texture2D" uid="uid://cohas73aibt45" path="res://elementosDeNivel/tilesand3.png" id="1_7gfhd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiot2"]
+size = Vector2(174.5, 166.5)
+
+[node name="piso_estatico" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.75, 4.75)
+shape = SubResource("RectangleShape2D_jiot2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 1.00003)
+scale = Vector2(0.186891, 0.176056)
+texture = ExtResource("1_7gfhd")

@@ -1,17 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=12 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
 [ext_resource type="PackedScene" uid="uid://d0cr41f8g8yd2" path="res://elementosDeNivel/piso.tscn" id="2_1im3p"]
-[ext_resource type="PackedScene" uid="uid://rtyasefaddg3" path="res://elementosDeNivel/piso_doble.tscn" id="3_yq7hq"]
-[ext_resource type="PackedScene" uid="uid://cfgcin0cec473" path="res://elementosDeNivel/piso_grande_doble.tscn" id="4_250m2"]
+[ext_resource type="PackedScene" uid="uid://rtyasefaddg3" path="res://elementosDeNivel/piso_chico.tscn" id="4_a0p1l"]
+[ext_resource type="PackedScene" uid="uid://dif4ix42xgfro" path="res://elementosDeNivel/piso_alto.tscn" id="4_lss06"]
+[ext_resource type="PackedScene" uid="uid://cfgcin0cec473" path="res://elementosDeNivel/piso_grande_doble.tscn" id="5_plvle"]
 [ext_resource type="PackedScene" uid="uid://cknx1fxwkhcm3" path="res://elementosDeNivel/arbol.tscn" id="5_v0vyo"]
 [ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
 [ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
-[ext_resource type="PackedScene" uid="uid://dif4ix42xgfro" path="res://elementosDeNivel/piso_enorme.tscn" id="8_2apl0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llp3r"]
-size = Vector2(7359.85, 1855.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
 size = Vector2(16331, 483.5)
@@ -31,220 +28,129 @@ position = Vector2(6018, -954)
 scale = Vector2(7.46094, 6.44721)
 texture = ExtResource("7_j5yra")
 
+[node name="plataformas" type="Node2D" parent="ui"]
+
+[node name="piso_estatico" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(-461, 1653)
+
+[node name="piso_estatico2" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(6175, 1779)
+
+[node name="piso_estatico3" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(6183, 2088)
+
+[node name="piso_estatico4" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(7404, 1800)
+
+[node name="piso_estatico7" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(7412, 2054)
+
+[node name="piso_estatico8" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(8310, 2054)
+
+[node name="piso_estatico9" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(8318, 1757)
+
+[node name="piso_estatico5" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(9616, 2106)
+
+[node name="piso_estatico10" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(10540, 1665)
+
+[node name="piso_estatico11" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(10540, 2089)
+
+[node name="piso_estatico12" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(11710, 1521)
+
+[node name="piso_estatico13" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(11714, 2041)
+
+[node name="piso_estatico14" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(12638, 1405)
+
+[node name="piso_estatico15" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(12630, 2024)
+
+[node name="piso_estatico16" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(13503, 1312)
+
+[node name="piso_estatico17" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(13503, 2015)
+
+[node name="piso_estatico6" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
+position = Vector2(9615, 1665)
+
+[node name="PisoEnorme" parent="ui/plataformas" instance=ExtResource("4_lss06")]
+position = Vector2(961, 1591)
+
+[node name="PisoEnorme2" parent="ui/plataformas" instance=ExtResource("4_lss06")]
+position = Vector2(961, 2004)
+
+[node name="PisoEnorme3" parent="ui/plataformas" instance=ExtResource("4_lss06")]
+position = Vector2(2963, 1788)
+
+[node name="PisoEnorme4" parent="ui/plataformas" instance=ExtResource("4_lss06")]
+position = Vector2(2963, 2102)
+
+[node name="PisoGrandeDoble" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(3618, 1792)
+
+[node name="PisoGrandeDoble6" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(3618, 1792)
+
+[node name="PisoGrandeDoble2" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(6788, 1929)
+
+[node name="PisoGrandeDoble7" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(6796, 2082)
+
+[node name="PisoGrandeDoble3" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(5279, 1756)
+
+[node name="PisoGrandeDoble4" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(5279, 2106)
+
+[node name="PisoGrandeDoble5" parent="ui/plataformas" instance=ExtResource("5_plvle")]
+position = Vector2(5126, 2223)
+
+[node name="plataformas_chicas" type="Node" parent="ui/plataformas"]
+
+[node name="piso_estatico2" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1154)
+
+[node name="piso_estatico11" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(8848, 1637)
+
+[node name="piso_estatico3" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1307)
+
+[node name="piso_estatico4" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1443)
+
+[node name="piso_estatico5" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1575)
+
+[node name="piso_estatico6" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1731)
+
+[node name="piso_estatico7" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 1884)
+
+[node name="piso_estatico8" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(296, 2040)
+
+[node name="piso_estatico9" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(-573, 1174)
+
+[node name="piso_estatico12" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(5699, 1496)
+
+[node name="piso_estatico10" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
+position = Vector2(-14, 1371)
+
 [node name="Player" parent="ui" instance=ExtResource("1_ady08")]
-position = Vector2(95, 520)
-
-[node name="piso" type="Node" parent="ui"]
-
-[node name="PisoGrandeDoble" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-451, 1278)
-
-[node name="PisoGrandeDoble10" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2643, 1274)
-
-[node name="PisoGrandeDoble11" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2747, 1273)
-
-[node name="PisoGrandeDoble12" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2643, 1650)
-
-[node name="PisoGrandeDoble22" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2643, 1650)
-
-[node name="PisoGrandeDoble26" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(2643, 2037)
-
-[node name="PisoGrandeDoble13" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5334, 1871)
-
-[node name="PisoGrandeDoble28" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5328, 2068)
-
-[node name="PisoGrandeDoble14" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(3295, 1272)
-
-[node name="PisoGrandeDoble15" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(3391, 1274)
-
-[node name="PisoGrandeDoble16" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(3297, 1647)
-
-[node name="PisoGrandeDoble17" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(3389, 1643)
-
-[node name="PisoGrandeDoble27" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(3395, 2056)
-
-[node name="PisoGrandeDoble18" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5441, 1271)
-
-[node name="PisoGrandeDoble19" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5441, 1651)
-
-[node name="PisoGrandeDoble20" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5541, 1275)
-
-[node name="PisoGrandeDoble21" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(5541, 1647)
-
-[node name="PisoGrandeDoble7" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(794, 1649)
-
-[node name="PisoGrandeDoble9" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(804, 1649)
-
-[node name="PisoGrandeDoble8" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(864, 1649)
-
-[node name="PisoGrandeDoble25" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(870, 2005)
-
-[node name="PisoGrandeDoble6" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(864, 1270)
-
-[node name="PisoGrandeDoble5" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(790, 1268)
-
-[node name="PisoGrandeDoble3" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-375, 1646)
-
-[node name="PisoGrandeDoble23" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-375, 2002)
-
-[node name="PisoGrandeDoble24" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-38, 2002)
-
-[node name="PisoGrandeDoble2" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-35, 1278)
-
-[node name="PisoGrandeDoble4" parent="ui/piso" instance=ExtResource("4_250m2")]
-position = Vector2(-34, 1646)
-
-[node name="piso_estatico3" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(378, 1016)
-
-[node name="piso_estatico24" parent="ui/piso" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1243)
-
-[node name="piso_1" type="Node2D" parent="ui/piso"]
-
-[node name="piso_estatico13" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(422, 1110)
-
-[node name="piso_estatico24" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(-267, 1021)
-
-[node name="piso_estatico15" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(5364, 1014)
-
-[node name="piso_estatico16" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(5619, 1014)
-
-[node name="piso_estatico34" parent="ui/piso/piso_1" instance=ExtResource("3_yq7hq")]
-position = Vector2(9950, 1235)
-
-[node name="piso_estatico22" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1097)
-rotation = 3.14159
-
-[node name="piso_estatico17" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(3635, 1292)
-
-[node name="piso_estatico18" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(5195, 1108)
-
-[node name="piso_estatico20" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(5081, 1193)
-
-[node name="piso_estatico21" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(5181, 1193)
-
-[node name="piso_estatico19" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(2387, 1229)
-
-[node name="piso_estatico25" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1321)
-
-[node name="piso_estatico26" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1403)
-
-[node name="piso_estatico27" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1473)
-
-[node name="piso_estatico28" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1552)
-
-[node name="piso_estatico29" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1631)
-
-[node name="piso_estatico30" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1710)
-
-[node name="piso_estatico33" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1831)
-
-[node name="piso_estatico31" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(375, 1775)
-
-[node name="piso_estatico32" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(375, 1775)
-
-[node name="PisoEnorme" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(6537, 1240)
-
-[node name="PisoEnorme2" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(7757, 1391)
-
-[node name="PisoEnorme3" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(6540, 1593)
-
-[node name="PisoEnorme4" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(7760, 1598)
-
-[node name="PisoEnorme5" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(7936, 1240)
-
-[node name="PisoEnorme12" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(12134, 1386)
-
-[node name="PisoEnorme13" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(12129, 1623)
-
-[node name="PisoEnorme14" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(12321, 1235)
-
-[node name="PisoEnorme15" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(12523, 1628)
-
-[node name="PisoEnorme16" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(12523, 1235)
-
-[node name="PisoEnorme6" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(8984, 1598)
-
-[node name="PisoEnorme7" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(9155, 1381)
-
-[node name="PisoEnorme8" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(9372, 1235)
-
-[node name="PisoEnorme9" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(9372, 1613)
-
-[node name="PisoEnorme17" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(9372, 1997)
-
-[node name="PisoEnorme10" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(10840, 1232)
-
-[node name="PisoEnorme11" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(10912, 1623)
-
-[node name="PisoEnorme18" parent="ui/piso/piso_1" instance=ExtResource("8_2apl0")]
-position = Vector2(10912, 2007)
-
-[node name="piso_estatico23" parent="ui/piso/piso_1" instance=ExtResource("2_1im3p")]
-position = Vector2(377, 1165)
+position = Vector2(76, 644)
 
 [node name="hojas" type="Node" parent="ui"]
 
@@ -325,14 +231,6 @@ position = Vector2(4784, -693)
 
 [node name="Arbol" parent="ui" instance=ExtResource("5_v0vyo")]
 position = Vector2(1977, 1166)
-
-[node name="Area2D" type="Area2D" parent="ui"]
-position = Vector2(9208.01, -8.47998)
-rotation = -0.00229513
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ui/Area2D"]
-position = Vector2(390.141, 806.378)
-shape = SubResource("RectangleShape2D_llp3r")
 
 [node name="particulas" type="Node2D" parent="ui"]
 
@@ -557,11 +455,18 @@ initial_velocity_max = 500.0
 scale_amount_min = 5.0
 scale_amount_max = 5.0
 
+[node name="ColorRect" type="ColorRect" parent="ui"]
+offset_left = -2333.0
+offset_top = 1026.0
+offset_right = -1417.0
+offset_bottom = 1263.0
+
 [node name="StaticBody2D" type="Area2D" parent="."]
 position = Vector2(1128, 2487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4948, -376)
+visible = false
+position = Vector2(4920, -440)
 shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="WindTimer" type="Timer" parent="."]
@@ -572,7 +477,7 @@ autostart = true
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-1003, 696)
+position = Vector2(-1259, 898)
 shape = SubResource("RectangleShape2D_lnbio")
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]

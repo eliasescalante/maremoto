@@ -185,6 +185,7 @@ animation = &"walk_left"
 frame_progress = 0.060104
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(7, 2)

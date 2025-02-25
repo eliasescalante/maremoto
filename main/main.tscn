@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ip73dlljecy8"]
+[gd_scene load_steps=23 format=3 uid="uid://ip73dlljecy8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5em6y"]
 [ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="2_jler0"]
@@ -8,8 +8,21 @@
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="5_thn08"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="6_ol6k5"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsrqd"]
+texture = ExtResource("3_p5phd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xchph"]
+texture = ExtResource("3_p5phd")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tcy7"]
 texture = ExtResource("3_ol3u4")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nxxo"]
+texture = ExtResource("3_p5phd")
 expand_margin_left = 20.0
 expand_margin_top = 70.0
 expand_margin_right = 20.0
@@ -22,8 +35,21 @@ expand_margin_top = 70.0
 expand_margin_right = 20.0
 expand_margin_bottom = 80.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7x5kh"]
+texture = ExtResource("3_p5phd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtari"]
+texture = ExtResource("3_p5phd")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52b8e"]
 texture = ExtResource("5_thn08")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ilkib"]
+texture = ExtResource("3_p5phd")
 expand_margin_left = 20.0
 expand_margin_top = 70.0
 expand_margin_right = 20.0
@@ -36,8 +62,18 @@ expand_margin_top = 70.0
 expand_margin_right = 20.0
 expand_margin_bottom = 80.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jko2i"]
+texture = ExtResource("3_p5phd")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_va4yv"]
 texture = ExtResource("3_ol3u4")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gq1y7"]
+texture = ExtResource("3_p5phd")
 expand_margin_left = 20.0
 expand_margin_top = 70.0
 expand_margin_right = 20.0
@@ -66,7 +102,10 @@ offset_right = 759.0
 offset_bottom = 296.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_wsrqd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xchph")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2tcy7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2nxxo")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pr1fo")
 text = "JUGAR"
 
@@ -77,7 +116,10 @@ offset_right = 760.0
 offset_bottom = 387.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_7x5kh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mtari")
 theme_override_styles/hover = SubResource("StyleBoxTexture_52b8e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ilkib")
 theme_override_styles/normal = SubResource("StyleBoxTexture_f11kp")
 text = "CRÉDITOS"
 
@@ -88,7 +130,9 @@ offset_right = 1218.0
 offset_bottom = 695.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_jko2i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_va4yv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gq1y7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tsn5l")
 text = "SALIR"
 

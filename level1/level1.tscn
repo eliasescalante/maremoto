@@ -455,12 +455,6 @@ initial_velocity_max = 500.0
 scale_amount_min = 5.0
 scale_amount_max = 5.0
 
-[node name="ColorRect" type="ColorRect" parent="ui"]
-offset_left = -2333.0
-offset_top = 1026.0
-offset_right = -1417.0
-offset_bottom = 1263.0
-
 [node name="StaticBody2D" type="Area2D" parent="."]
 position = Vector2(1128, 2487)
 

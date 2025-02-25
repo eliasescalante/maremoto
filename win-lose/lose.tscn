@@ -1,11 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlcs3snl3ru0u"]
+[gd_scene load_steps=15 format=3 uid="uid://dlcs3snl3ru0u"]
 
 [ext_resource type="Script" path="res://win-lose/lose.gd" id="1_5eet8"]
 [ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_b6hk2"]
+[ext_resource type="Texture2D" uid="uid://dhwu8yukj3owb" path="res://main/start buttom.png" id="3_kgjeb"]
+[ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="3_v7hky"]
+[ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="4_fiv8b"]
+[ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="5_hqhsm"]
+[ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="6_tqlor"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1pnp"]
-font_size = 54
-font_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+font_size = 90
+font_color = Color(0.242977, 0.124542, 0.221904, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aqnbk"]
+texture = ExtResource("3_kgjeb")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trwge"]
+texture = ExtResource("3_kgjeb")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ayxsi"]
+texture = ExtResource("4_fiv8b")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56xyv"]
+texture = ExtResource("5_hqhsm")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0h211"]
+texture = ExtResource("5_hqhsm")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ch8w5"]
+texture = ExtResource("6_tqlor")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
 
 [node name="Lose" type="Node2D"]
 script = ExtResource("1_5eet8")
@@ -18,10 +65,13 @@ scale = Vector2(0.635254, 0.689815)
 texture = ExtResource("2_b6hk2")
 
 [node name="Label" type="Label" parent="ui"]
-offset_left = 454.0
-offset_top = 299.0
-offset_right = 822.0
+offset_left = 424.0
+offset_top = 233.0
+offset_right = 847.0
 offset_bottom = 392.0
+theme_override_colors/font_color = Color(0.347817, 0.347817, 0.347817, 1)
+theme_override_fonts/font = ExtResource("3_v7hky")
+theme_override_font_sizes/font_size = 90
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_j1pnp")
 
@@ -30,6 +80,11 @@ offset_left = 491.0
 offset_top = 457.0
 offset_right = 750.0
 offset_bottom = 536.0
+theme_override_fonts/font = ExtResource("3_v7hky")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_aqnbk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_trwge")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ayxsi")
 text = "TRY AGAIN"
 
 [node name="QUIT" type="Button" parent="ui"]
@@ -37,6 +92,11 @@ offset_left = 491.0
 offset_top = 555.0
 offset_right = 753.0
 offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("3_v7hky")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_56xyv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0h211")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ch8w5")
 text = "QUIT"
 
 [connection signal="pressed" from="ui/TRY" to="." method="_on_try_pressed"]

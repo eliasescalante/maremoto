@@ -1,8 +1,88 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyjucxmsu3yvm"]
+[gd_scene load_steps=14 format=3 uid="uid://dyjucxmsu3yvm"]
 
 [ext_resource type="Script" path="res://win-lose/win.gd" id="1_imd4r"]
+[ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_sev1r"]
+[ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="3_epq1w"]
+[ext_resource type="Texture2D" uid="uid://dhwu8yukj3owb" path="res://main/start buttom.png" id="4_d451m"]
+[ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="4_itc54"]
+[ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="4_kpvor"]
+[ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="5_u40c2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p41cp"]
+texture = ExtResource("4_itc54")
+expand_margin_left = 35.0
+expand_margin_top = 70.0
+expand_margin_right = 35.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwebr"]
+texture = ExtResource("4_itc54")
+expand_margin_left = 35.0
+expand_margin_top = 70.0
+expand_margin_right = 35.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw3jh"]
+texture = ExtResource("5_u40c2")
+expand_margin_left = 35.0
+expand_margin_top = 70.0
+expand_margin_right = 35.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cj8le"]
+texture = ExtResource("4_d451m")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3hnq"]
+texture = ExtResource("4_d451m")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hn57"]
+texture = ExtResource("4_kpvor")
+expand_margin_left = 20.0
+expand_margin_top = 70.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
 
 [node name="Win" type="Node2D"]
 script = ExtResource("1_imd4r")
 
+[node name="CloseCurtain" type="Sprite2D" parent="."]
+position = Vector2(705, 480)
+texture = ExtResource("2_sev1r")
+
 [node name="ui" type="Node2D" parent="."]
+
+[node name="start" type="Button" parent="ui"]
+offset_left = 1035.0
+offset_top = 643.0
+offset_right = 1245.0
+offset_bottom = 699.0
+theme_override_fonts/font = ExtResource("3_epq1w")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_p41cp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hwebr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mw3jh")
+text = "Jugar de vuelta"
+
+[node name="salir" type="Button" parent="ui"]
+offset_left = 846.0
+offset_top = 645.0
+offset_right = 984.0
+offset_bottom = 701.0
+theme_override_fonts/font = ExtResource("3_epq1w")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_cj8le")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x3hnq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0hn57")
+text = "Salir
+"
+
+[connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

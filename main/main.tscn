@@ -60,26 +60,26 @@ script = ExtResource("1_5em6y")
 [node name="ui" type="Node" parent="."]
 
 [node name="start" type="Button" parent="ui"]
-offset_left = 469.0
+offset_left = 516.0
 offset_top = 222.0
-offset_right = 822.0
+offset_right = 759.0
 offset_bottom = 296.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_2tcy7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pr1fo")
-text = "START"
+text = "JUGAR"
 
 [node name="credits" type="Button" parent="ui"]
-offset_left = 469.0
+offset_left = 515.0
 offset_top = 313.0
-offset_right = 822.0
+offset_right = 760.0
 offset_bottom = 387.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_52b8e")
 theme_override_styles/normal = SubResource("StyleBoxTexture_f11kp")
-text = "CREDITOS"
+text = "CRÉDITOS"
 
 [node name="salir" type="Button" parent="ui"]
 offset_left = 1047.0
@@ -103,8 +103,8 @@ label_settings = SubResource("LabelSettings_lgatf")
 horizontal_alignment = 1
 
 [node name="PatanllaInicio" type="Sprite2D" parent="."]
-position = Vector2(647, 358)
-scale = Vector2(0.628418, 0.677778)
+position = Vector2(519.75, 349)
+scale = Vector2(0.789307, 0.677778)
 texture = ExtResource("2_laypl")
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]

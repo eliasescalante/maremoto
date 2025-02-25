@@ -85,9 +85,9 @@ scale = Vector2(0.640137, 0.693519)
 texture = ExtResource("2_7ca6e")
 
 [node name="texto" type="RichTextLabel" parent="ui"]
-offset_left = 215.0
+offset_left = 232.0
 offset_top = 91.0
-offset_right = 1035.0
+offset_right = 1052.0
 offset_bottom = 657.0
 theme_override_fonts/normal_font = ExtResource("3_ljttv")
 theme_override_font_sizes/normal_font_size = 30
@@ -98,6 +98,7 @@ No va a ser fácil, el suelo resquebrajado dificulta tu avance, el viento intent
 Cada estación traerá nuevas pruebas, pero también esperanza.
 Saltá, esquivá, resistí. Tu viaje comienza hoy…
 "
+scroll_active = false
 tab_size = 6
 
 [node name="ColorRect" type="ColorRect" parent="ui"]

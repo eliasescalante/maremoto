@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dyjucxmsu3yvm"]
+[gd_scene load_steps=18 format=3 uid="uid://dyjucxmsu3yvm"]
 
 [ext_resource type="Script" path="res://win-lose/win.gd" id="1_imd4r"]
 [ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_sev1r"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="4_itc54"]
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="4_kpvor"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="5_u40c2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2345e"]
+font = ExtResource("3_epq1w")
+font_size = 80
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p41cp"]
 texture = ExtResource("4_itc54")
@@ -50,14 +54,91 @@ expand_margin_top = 70.0
 expand_margin_right = 20.0
 expand_margin_bottom = 80.0
 
+[sub_resource type="Animation" id="Animation_sc2g3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ui/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0430392, 0.0430392, 0.0430392, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ui/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0901961)]
+}
+
+[sub_resource type="Animation" id="Animation_tap8c"]
+resource_name = "transicion"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("ui/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0430392, 0.0430392, 0.0430392, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ui/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0901961)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3xo3"]
+_data = {
+"RESET": SubResource("Animation_sc2g3"),
+"transicion": SubResource("Animation_tap8c")
+}
+
 [node name="Win" type="Node2D"]
 script = ExtResource("1_imd4r")
 
-[node name="CloseCurtain" type="Sprite2D" parent="."]
+[node name="ui" type="Node2D" parent="."]
+
+[node name="CloseCurtain" type="Sprite2D" parent="ui"]
 position = Vector2(705, 480)
 texture = ExtResource("2_sev1r")
 
-[node name="ui" type="Node2D" parent="."]
+[node name="Label" type="Label" parent="ui"]
+offset_left = 455.0
+offset_top = 198.0
+offset_right = 772.0
+offset_bottom = 316.0
+text = "GRACIAS 
+POR JUGAR"
+label_settings = SubResource("LabelSettings_2345e")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ui"]
+modulate = Color(1, 1, 1, 0.0901961)
+offset_right = 1283.0
+offset_bottom = 723.0
+color = Color(0.0430392, 0.0430392, 0.0430392, 1)
 
 [node name="start" type="Button" parent="ui"]
 offset_left = 1035.0
@@ -83,6 +164,11 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_x3hnq")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0hn57")
 text = "Salir
 "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b3xo3")
+}
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

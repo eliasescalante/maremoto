@@ -74,3 +74,9 @@ func _on_area2d_body_entered(body: Node) -> void:
 	if body == player:
 		body.queue_free()  # Eliminar al jugador
 		get_tree().change_scene_to_file("res://win-lose/lose.tscn")
+
+func _on_win_body_entered(body: Node2D) -> void:
+	if body == player:
+		print("¡Jugador ha llegado al final del nivel!")
+		# Cambiar a la escena de victoria
+		get_tree().change_scene_to_file("res://win-lose/win.tscn")

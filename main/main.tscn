@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dhwu8yukj3owb" path="res://main/start buttom.png" id="3_p5phd"]
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="5_thn08"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="6_ol6k5"]
+[ext_resource type="Texture2D" uid="uid://gfpucenc2ku1" path="res://main/semillita logo.png" id="7_p7x12"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsrqd"]
 texture = ExtResource("3_p5phd")
@@ -86,20 +87,16 @@ expand_margin_top = 70.0
 expand_margin_right = 20.0
 expand_margin_bottom = 80.0
 
-[sub_resource type="LabelSettings" id="LabelSettings_lgatf"]
-font_size = 89
-font_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5em6y")
 
 [node name="ui" type="Node" parent="."]
 
 [node name="start" type="Button" parent="ui"]
-offset_left = 516.0
-offset_top = 222.0
-offset_right = 759.0
-offset_bottom = 296.0
+offset_left = 531.0
+offset_top = 498.0
+offset_right = 774.0
+offset_bottom = 572.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_wsrqd")
@@ -110,10 +107,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pr1fo")
 text = "JUGAR"
 
 [node name="credits" type="Button" parent="ui"]
-offset_left = 515.0
-offset_top = 313.0
-offset_right = 760.0
-offset_bottom = 387.0
+offset_left = 530.0
+offset_top = 589.0
+offset_right = 775.0
+offset_bottom = 663.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_7x5kh")
@@ -124,10 +121,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_f11kp")
 text = "CRÉDITOS"
 
 [node name="salir" type="Button" parent="ui"]
-offset_left = 1047.0
-offset_top = 640.0
-offset_right = 1218.0
-offset_bottom = 695.0
+offset_left = 1096.0
+offset_top = 653.0
+offset_right = 1267.0
+offset_bottom = 708.0
 theme_override_fonts/font = ExtResource("2_jler0")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_jko2i")
@@ -136,18 +133,13 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_gq1y7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tsn5l")
 text = "SALIR"
 
-[node name="Label" type="Label" parent="ui"]
-offset_left = 390.0
-offset_top = 85.0
-offset_right = 919.0
-offset_bottom = 208.0
-text = "LA SEMILLA
-"
-label_settings = SubResource("LabelSettings_lgatf")
-horizontal_alignment = 1
+[node name="SemillitaLogo" type="Sprite2D" parent="ui"]
+position = Vector2(652, 245)
+scale = Vector2(0.573343, 0.567217)
+texture = ExtResource("7_p7x12")
 
 [node name="PatanllaInicio" type="Sprite2D" parent="."]
-position = Vector2(519.75, 349)
+position = Vector2(482, 361)
 scale = Vector2(0.789307, 0.677778)
 texture = ExtResource("2_laypl")
 

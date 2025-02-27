@@ -6,6 +6,7 @@
 size = Vector2(706, 838)
 
 [node name="PisoEnorme" type="StaticBody2D"]
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 6)

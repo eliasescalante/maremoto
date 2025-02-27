@@ -25,6 +25,10 @@ window/size/initial_position=Vector2i(299, 300)
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
+[global_group]
+
+player=""
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

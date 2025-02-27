@@ -10,7 +10,6 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1pnp"]
 font_size = 90
-font_color = Color(0.242977, 0.124542, 0.221904, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aqnbk"]
 texture = ExtResource("3_kgjeb")
@@ -85,7 +84,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_aqnbk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_trwge")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ayxsi")
-text = "TRY AGAIN"
+text = "REINTENTAR"
 
 [node name="QUIT" type="Button" parent="ui"]
 offset_left = 491.0
@@ -97,7 +96,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_56xyv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0h211")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ch8w5")
-text = "QUIT"
+text = "SALIR"
 
 [connection signal="pressed" from="ui/TRY" to="." method="_on_try_pressed"]
 [connection signal="pressed" from="ui/QUIT" to="." method="_on_quit_pressed"]

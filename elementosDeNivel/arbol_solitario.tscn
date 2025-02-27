@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7dul6mhhys4s"]
+
+[ext_resource type="Texture2D" uid="uid://drt0j21oolerd" path="res://elementosDeNivel/tiles arboles.png" id="1_gq7gt"]
+
+[node name="ArbolSolitario" type="Node2D"]
+
+[node name="TilesArboles" type="Sprite2D" parent="."]
+position = Vector2(-15, 8)
+scale = Vector2(4.23046, 6.32182)
+texture = ExtResource("1_gq7gt")
+region_enabled = true
+region_rect = Rect2(98.6936, 804.188, 371.775, 275.812)

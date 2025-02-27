@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://dlcs3snl3ru0u"]
 
 [ext_resource type="Script" path="res://win-lose/lose.gd" id="1_5eet8"]
-[ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_b6hk2"]
+[ext_resource type="Texture2D" uid="uid://yvqmelo470am" path="res://win-lose/lvl2  arbol 2.png" id="2_4n0n8"]
 [ext_resource type="Texture2D" uid="uid://dhwu8yukj3owb" path="res://main/start buttom.png" id="3_kgjeb"]
 [ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="3_v7hky"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="4_fiv8b"]
@@ -61,7 +61,7 @@ script = ExtResource("1_5eet8")
 [node name="CloseCurtain" type="Sprite2D" parent="ui"]
 position = Vector2(636.5, 367.5)
 scale = Vector2(0.635254, 0.689815)
-texture = ExtResource("2_b6hk2")
+texture = ExtResource("2_4n0n8")
 
 [node name="Label" type="Label" parent="ui"]
 offset_left = 424.0

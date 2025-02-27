@@ -141,22 +141,22 @@ offset_bottom = 723.0
 color = Color(0.0430392, 0.0430392, 0.0430392, 1)
 
 [node name="start" type="Button" parent="ui"]
-offset_left = 1035.0
-offset_top = 643.0
-offset_right = 1245.0
-offset_bottom = 699.0
+offset_left = 57.0
+offset_top = 635.0
+offset_right = 238.0
+offset_bottom = 691.0
 theme_override_fonts/font = ExtResource("3_epq1w")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = SubResource("StyleBoxTexture_p41cp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hwebr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mw3jh")
-text = "Jugar de vuelta"
+text = "Inicio"
 
 [node name="salir" type="Button" parent="ui"]
-offset_left = 846.0
-offset_top = 645.0
-offset_right = 984.0
-offset_bottom = 701.0
+offset_left = 1037.0
+offset_top = 631.0
+offset_right = 1244.0
+offset_bottom = 687.0
 theme_override_fonts/font = ExtResource("3_epq1w")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = SubResource("StyleBoxTexture_cj8le")

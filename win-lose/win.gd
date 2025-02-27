@@ -15,4 +15,4 @@ func _on_salir_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	# Acción cuando el botón "Start" es presionado
-	get_tree().change_scene_to_file("res://lore_intro/lore_intro.tscn")
+	get_tree().change_scene_to_file("res://main/main.tscn")

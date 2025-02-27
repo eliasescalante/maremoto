@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c10p25cv54fy"]
+
+[ext_resource type="Texture2D" uid="uid://drt0j21oolerd" path="res://elementosDeNivel/tiles arboles.png" id="1_k84g3"]
+
+[node name="Arboles" type="Node2D"]
+
+[node name="TilesArboles" type="Sprite2D" parent="."]
+position = Vector2(4.99994, 14)
+scale = Vector2(3.79053, 5.06019)
+texture = ExtResource("1_k84g3")

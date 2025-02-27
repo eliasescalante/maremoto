@@ -43,8 +43,9 @@ func _on_wind_timer_timeout() -> void:
 		for wind_particle in wind_particles:
 			wind_particle.emitting = true
 
-		# Activar sonido del viento solo si no está reproduciéndose
-		if wind_audio and not wind_audio.playing:
+		# Asegurar que el sonido del viento se reproduce en cada ráfaga
+		if wind_audio:
+			wind_audio.stop()  # Detener cualquier reproducción anterior para reiniciar correctamente
 			wind_audio.play()
 
 		# Aplicar la fuerza del viento al jugador
@@ -71,15 +72,6 @@ func _stop_wind() -> void:
 	# Eliminar el efecto del viento en el jugador
 	if player and player.has_method("add_wind_force"):
 		player.add_wind_force(0.0)
-
-	# No detener el sonido inmediatamente, dejar que termine
-	if wind_audio and wind_audio.playing:
-		wind_audio.finished.connect(_on_wind_audio_finished)
-
-func _on_wind_audio_finished() -> void:
-	if wind_audio:
-		wind_audio.disconnect("finished", _on_wind_audio_finished)
-		wind_audio.stop()
 
 func _on_area2d_body_entered(body: Node) -> void:
 	if body == player:

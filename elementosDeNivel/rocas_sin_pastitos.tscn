@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsm6gd5p61gtd"]
+
+[ext_resource type="Texture2D" uid="uid://cgk2nc2rmifr7" path="res://assets/tileset rocas2.png" id="1_vs8rv"]
+
+[node name="RocasSinPastitos" type="Node2D"]
+
+[node name="TilesetRocas2" type="Sprite2D" parent="."]
+position = Vector2(4, 2)
+scale = Vector2(2.07963, 2.34195)
+texture = ExtResource("1_vs8rv")
+region_enabled = true
+region_rect = Rect2(1197.63, 666.472, 135.046, 87.8871)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckyn7wgk8aewh"]
+[gd_scene load_steps=15 format=3 uid="uid://ckyn7wgk8aewh"]
 
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
 [ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
 [ext_resource type="PackedScene" uid="uid://ehit2y6t53yr" path="res://elementosDeNivel/planta.tscn" id="9_0xrhe"]
+[ext_resource type="AudioStream" uid="uid://c0ndufmt4nnt7" path="res://level1/vientito (1).mp3" id="11_gomi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
 size = Vector2(16331, 483.5)
@@ -515,6 +516,10 @@ shape = SubResource("RectangleShape2D_lnbio")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win"]
 position = Vector2(13529, 670)
 shape = SubResource("RectangleShape2D_a3ute")
+
+[node name="WindAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_gomi1")
+volume_db = 1.219
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
 [connection signal="body_entered" from="win" to="." method="_on_win_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0ndufmt4nnt7"
+path="res://.godot/imported/vientito (1).mp3-009617fc7e9ef7f7fdbbb82fa3c7cac3.mp3str"
+
+[deps]
+
+source_file="res://level1/vientito (1).mp3"
+dest_files=["res://.godot/imported/vientito (1).mp3-009617fc7e9ef7f7fdbbb82fa3c7cac3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

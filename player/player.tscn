@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://lspweodvannb"]
+[gd_scene load_steps=28 format=3 uid="uid://lspweodvannb"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sv22x"]
 [ext_resource type="Texture2D" uid="uid://btg502olc7gja" path="res://player/walk_left.png" id="2_rkxxg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://5odg7tvmucld" path="res://player/sprite sheet.png" id="3_4vhd8"]
 [ext_resource type="Texture2D" uid="uid://dwpwslk6qvykx" path="res://player/sprite sheet (2).png" id="4_gj84v"]
 [ext_resource type="Texture2D" uid="uid://dym582ylwx28c" path="res://player/sprite sheet invertido nuevo.png" id="5_qg6wf"]
+[ext_resource type="AudioStream" uid="uid://bn7ox8an1oxnv" path="res://player/pasitos.mp3" id="7_psi77"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65x26"]
 atlas = ExtResource("2_rkxxg")
@@ -94,7 +95,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -105,7 +106,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -181,11 +182,15 @@ region_rect = Rect2(0, 0, 28.679, 32.0494)
 position = Vector2(0.658824, -2.16949)
 scale = Vector2(0.100465, 0.086725)
 sprite_frames = SubResource("SpriteFrames_awe8i")
-animation = &"walk_left"
-frame_progress = 0.060104
+animation = &"idle_right"
+frame_progress = 0.258442
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(7, 2)
 polygon = PackedVector2Array(-19, -61, -39, -32, -50, -4, -36, 22, -17, 37, -21, 52, -4, 53, 10, 52, 16, 44, 33, 16, 45, -4, 39, -30, 17, -49, 12, -66)
+
+[node name="FootstepAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_psi77")
+volume_db = 1.149

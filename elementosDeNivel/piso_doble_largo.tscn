@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://qrcyk7304r3"]
+
+[ext_resource type="Texture2D" uid="uid://c2768yyuxx5a4" path="res://assets/tileset desierto2.png" id="1_oq5w8"]
+
+[node name="PisoDobleLargo" type="StaticBody2D"]
+
+[node name="TilesetDesierto2" type="Sprite2D" parent="."]
+texture = ExtResource("1_oq5w8")
+region_enabled = true
+region_rect = Rect2(355.589, 107.385, 652.821, 389.744)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-296, -165, -96, -183, 9, -194, 166, -184, 252, -176, 302, -180, 323, -157, 326, -83, 329, 182, -326, 187, -325, -70, -328, -103, -318, -156)

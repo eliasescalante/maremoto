@@ -1,18 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://rtyasefaddg3"]
 
-[ext_resource type="Texture2D" uid="uid://cohas73aibt45" path="res://elementosDeNivel/tilesand3.png" id="1_7gfhd"]
+[ext_resource type="Texture2D" uid="uid://c2768yyuxx5a4" path="res://assets/tileset desierto2.png" id="1_3lbwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jiot2"]
-size = Vector2(174.5, 166.5)
+size = Vector2(220, 357)
 
 [node name="piso_estatico" type="StaticBody2D"]
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.75, 4.75)
+position = Vector2(0, 75.5)
 shape = SubResource("RectangleShape2D_jiot2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3, 1.00003)
-scale = Vector2(0.186891, 0.176056)
-texture = ExtResource("1_7gfhd")
+[node name="TilesetDesierto2" type="Sprite2D" parent="."]
+position = Vector2(-9, 68)
+texture = ExtResource("1_3lbwd")
+region_enabled = true
+region_rect = Rect2(343.944, 94.2878, 238.62, 408.953)

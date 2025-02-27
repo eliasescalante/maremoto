@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://8b6jqe8ogl7h"]
+
+[ext_resource type="Texture2D" uid="uid://cgk2nc2rmifr7" path="res://assets/tileset rocas2.png" id="1_a67dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2deqa"]
+size = Vector2(164, 90)
+
+[node name="Roca" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 2)
+shape = SubResource("RectangleShape2D_2deqa")
+
+[node name="TilesetRocas2" type="Sprite2D" parent="."]
+position = Vector2(-3, -3)
+scale = Vector2(1.38199, 1.50794)
+texture = ExtResource("1_a67dc")
+region_enabled = true
+region_rect = Rect2(1348.18, 640.554, 161.098, 126.788)

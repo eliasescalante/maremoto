@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c32adg78x5r6w"]
+
+[ext_resource type="Texture2D" uid="uid://cgk2nc2rmifr7" path="res://assets/tileset rocas2.png" id="1_m27pf"]
+
+[node name="PiedraParaEscalar" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 4.75777
+polygon = PackedVector2Array(-19, -50, 41, -59, 55.2629, -39.5476, 62.9805, -1.85891, 81.9146, 18.3029, 103, 40, 17, 49, -106, 48, -110, 29, -85, -2, -41, -31, -23, -31)
+
+[node name="TilesetRocas2" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+rotation = -1.5708
+texture = ExtResource("1_m27pf")
+region_enabled = true
+region_rect = Rect2(1350.46, 860.851, 235.795, 120.041)

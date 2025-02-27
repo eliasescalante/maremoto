@@ -1,16 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0cr41f8g8yd2"]
+[gd_scene load_steps=2 format=3 uid="uid://d0cr41f8g8yd2"]
 
-[ext_resource type="Texture2D" uid="uid://ckbu8erprlry1" path="res://elementosDeNivel/tilesand4.png" id="1_hamhw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiot2"]
-size = Vector2(908, 915)
+[ext_resource type="Texture2D" uid="uid://bq14aw802uqif" path="res://assets/tileset desierto 3.png" id="1_tpklm"]
 
 [node name="piso_estatico" type="StaticBody2D"]
 collision_layer = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_jiot2")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-9.5, -6.5)
+polygon = PackedVector2Array(-399.5, -423.5, -288.5, -449.5, 263.5, -458.5, 368.5, -442.5, 419.5, -350.5, 438.5, 341.5, 267.5, 436.5, -329.5, 446.5, -431.5, 347.5, -469.5, -65.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hamhw")
+[node name="TilesetDesierto3" type="Sprite2D" parent="."]
+position = Vector2(2.50009, 6.50002)
+scale = Vector2(1.04346, 1.07685)
+texture = ExtResource("1_tpklm")

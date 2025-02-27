@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca37ebcuqqbl0"]
+
+[ext_resource type="Texture2D" uid="uid://c2768yyuxx5a4" path="res://assets/tileset desierto2.png" id="1_7emv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrxc6"]
+size = Vector2(836, 271)
+
+[node name="PisoDobleLargoMedio" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -4.5)
+shape = SubResource("RectangleShape2D_nrxc6")
+
+[node name="TilesetDesierto2" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("1_7emv4")
+region_enabled = true
+region_rect = Rect2(571.897, 629.641, 845.744, 290.359)

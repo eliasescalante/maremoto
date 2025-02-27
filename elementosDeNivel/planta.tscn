@@ -75,10 +75,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iw6ht"]
-radius = 59.145
+radius = 47.0884
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a5uab"]
-radius = 58.6195
+radius = 50.6785
 
 [node name="Planta" type="CharacterBody2D"]
 collision_mask = 3
@@ -89,7 +89,7 @@ position = Vector2(21, 51)
 rotation = -0.00534813
 scale = Vector2(2.86304, 3.19208)
 sprite_frames = SubResource("SpriteFrames_0wd3o")
-frame_progress = 0.870035
+frame_progress = 0.895007
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -99,7 +99,7 @@ scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_iw6ht")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -4)
+position = Vector2(12, 5)
 rotation = -0.627622
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_a5uab")

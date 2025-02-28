@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ip73dlljecy8"]
+[gd_scene load_steps=24 format=3 uid="uid://ip73dlljecy8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5em6y"]
 [ext_resource type="FontFile" uid="uid://dejnru75y2jx6" path="res://lore_intro/IndieFlower-Regular.ttf" id="2_jler0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="5_thn08"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="6_ol6k5"]
 [ext_resource type="Texture2D" uid="uid://gfpucenc2ku1" path="res://main/semillita logo.png" id="7_p7x12"]
+[ext_resource type="AudioStream" uid="uid://dcpxmudgnx6wf" path="res://main/intro_prestada.mp3" id="9_68s4d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsrqd"]
 texture = ExtResource("3_p5phd")
@@ -142,6 +143,10 @@ texture = ExtResource("7_p7x12")
 position = Vector2(482, 361)
 scale = Vector2(0.789307, 0.677778)
 texture = ExtResource("2_laypl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_68s4d")
+autoplay = true
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ui/credits" to="." method="_on_credits_pressed"]

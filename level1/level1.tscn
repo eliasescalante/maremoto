@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://lspweodvannb" path="res://player/player.tscn" id="1_ady08"]
 [ext_resource type="Script" path="res://level1/level_1.gd" id="1_tcse7"]
 [ext_resource type="PackedScene" uid="uid://d0cr41f8g8yd2" path="res://elementosDeNivel/piso.tscn" id="2_1im3p"]
+[ext_resource type="Texture2D" uid="uid://dgxymdsnbevme" path="res://level1/nivel 1.png" id="2_8yb6y"]
 [ext_resource type="PackedScene" uid="uid://ca37ebcuqqbl0" path="res://elementosDeNivel/piso_doble_largo_medio.tscn" id="3_x1crm"]
 [ext_resource type="PackedScene" uid="uid://rtyasefaddg3" path="res://elementosDeNivel/piso_chico.tscn" id="4_a0p1l"]
 [ext_resource type="PackedScene" uid="uid://c10p25cv54fy" path="res://elementosDeNivel/arboles.tscn" id="4_mt2r0"]
 [ext_resource type="PackedScene" uid="uid://c7dul6mhhys4s" path="res://elementosDeNivel/arbol_solitario.tscn" id="5_22wlu"]
 [ext_resource type="PackedScene" uid="uid://cknx1fxwkhcm3" path="res://elementosDeNivel/arbol.tscn" id="5_v0vyo"]
 [ext_resource type="PackedScene" uid="uid://l3alnotbf4f" path="res://elementosDeNivel/piso_hoja.tscn" id="6_gsemg"]
-[ext_resource type="Texture2D" uid="uid://b5mbyi1wg624h" path="res://level1/lvl1.png" id="7_j5yra"]
 [ext_resource type="PackedScene" uid="uid://brjltisxwhp6j" path="res://elementosDeNivel/piso_chico_medio.tscn" id="7_nv3tc"]
 [ext_resource type="PackedScene" uid="uid://ehit2y6t53yr" path="res://elementosDeNivel/planta.tscn" id="9_0xrhe"]
 [ext_resource type="AudioStream" uid="uid://c0ndufmt4nnt7" path="res://level1/vientito (1).mp3" id="11_gomi1"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c32adg78x5r6w" path="res://elementosDeNivel/piedra_para_escalar.tscn" id="13_jw7rg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf4yh"]
-size = Vector2(16331, 483.5)
+size = Vector2(16469.5, 629.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnbio"]
 size = Vector2(799, 2453)
@@ -34,9 +34,9 @@ script = ExtResource("1_tcse7")
 [node name="piso_fondo" type="Node" parent="ui"]
 
 [node name="Lvl1" type="Sprite2D" parent="ui/piso_fondo"]
-position = Vector2(6732.5, -868.747)
+position = Vector2(6712, -224)
 scale = Vector2(8.18506, 6.60509)
-texture = ExtResource("7_j5yra")
+texture = ExtResource("2_8yb6y")
 
 [node name="PisoDobleLargoMedio4" parent="ui/piso_fondo" instance=ExtResource("3_x1crm")]
 position = Vector2(1890, 2661)
@@ -80,7 +80,7 @@ position = Vector2(5347, 2761)
 position = Vector2(6173, 2609)
 
 [node name="piso_estatico9" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
-position = Vector2(8105, 1519)
+position = Vector2(8041, 1567)
 
 [node name="piso_estatico18" parent="ui/plataformas" instance=ExtResource("2_1im3p")]
 position = Vector2(7209, 1642)
@@ -136,7 +136,7 @@ position = Vector2(258, 1186)
 position = Vector2(6702, 1555)
 
 [node name="piso_estatico13" parent="ui/plataformas/plataformas_chicas" instance=ExtResource("4_a0p1l")]
-position = Vector2(8647, 1296)
+position = Vector2(8705, 1296)
 
 [node name="Piso" parent="ui/plataformas" instance=ExtResource("7_nv3tc")]
 position = Vector2(231, 1845)
@@ -148,13 +148,16 @@ position = Vector2(228, 2423)
 position = Vector2(6677, 2194)
 
 [node name="Piso3" parent="ui/plataformas" instance=ExtResource("7_nv3tc")]
-position = Vector2(8620, 1972)
+position = Vector2(8680, 1972)
+
+[node name="Piso5" parent="ui/plataformas" instance=ExtResource("7_nv3tc")]
+position = Vector2(8686, 2427)
 
 [node name="Player" parent="ui" instance=ExtResource("1_ady08")]
-position = Vector2(-420, 758)
+position = Vector2(-429, 795)
 
 [node name="Planta" parent="ui" instance=ExtResource("9_0xrhe")]
-position = Vector2(8274, 742)
+position = Vector2(8012, 792)
 
 [node name="Planta2" parent="ui" instance=ExtResource("9_0xrhe")]
 position = Vector2(11358, 271)
@@ -168,13 +171,13 @@ position = Vector2(3719, 214)
 position = Vector2(4708, 379)
 
 [node name="PisoHoja4" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4175, 410)
+position = Vector2(4326, 460)
 
 [node name="PisoHoja5" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4893, 955)
 
 [node name="PisoHoja6" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(3772, 682)
+position = Vector2(3621, 591)
 
 [node name="PisoHoja7" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4430, 809)
@@ -294,10 +297,10 @@ position = Vector2(12475, -1971)
 position = Vector2(13019, -272)
 
 [node name="PisoHoja19" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4014, 1220)
+position = Vector2(4034, 928)
 
 [node name="PisoHoja25" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4414, 1037)
+position = Vector2(4747, 745)
 
 [node name="PisoHoja32" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(5099, 1189)
@@ -312,22 +315,22 @@ position = Vector2(4710, 1769)
 position = Vector2(4765, 1398)
 
 [node name="PisoHoja26" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4295, 1323)
+position = Vector2(4124, 1273)
 
 [node name="PisoHoja29" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(3870, 1488)
 
 [node name="PisoHoja30" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4175, 624)
+position = Vector2(4054, 624)
 
 [node name="PisoHoja31" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(4873, 681)
+position = Vector2(5085, 681)
 
 [node name="PisoHoja27" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4569, 1159)
 
 [node name="PisoHoja28" parent="ui/hojas" instance=ExtResource("6_gsemg")]
-position = Vector2(3949, 970)
+position = Vector2(3828, 1111)
 
 [node name="PisoHoja21" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(4385, 1561)
@@ -474,7 +477,7 @@ scale_amount_min = 5.0
 scale_amount_max = 5.0
 
 [node name="WindParticles4" type="CPUParticles2D" parent="ui/particulas"]
-position = Vector2(3925, 856)
+position = Vector2(4953, 1602)
 emitting = false
 amount = 200
 lifetime = 8.0
@@ -613,8 +616,7 @@ position = Vector2(5671, 1611)
 position = Vector2(823, 2945)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(4910, -416)
+position = Vector2(4979.25, -489.125)
 shape = SubResource("RectangleShape2D_lf4yh")
 
 [node name="WindTimer" type="Timer" parent="."]

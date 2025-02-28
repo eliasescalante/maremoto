@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dyjucxmsu3yvm"]
+[gd_scene load_steps=19 format=3 uid="uid://dyjucxmsu3yvm"]
 
 [ext_resource type="Script" path="res://win-lose/win.gd" id="1_imd4r"]
 [ext_resource type="Texture2D" uid="uid://1vmvkwu55vwc" path="res://win-lose/close curtain.png" id="2_sev1r"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="4_itc54"]
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="4_kpvor"]
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="5_u40c2"]
+[ext_resource type="AudioStream" uid="uid://cfvdrouwdoufy" path="res://win-lose/ending.mp3" id="8_7bu5n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2345e"]
 font = ExtResource("3_epq1w")
@@ -169,6 +170,10 @@ text = "Salir
 libraries = {
 "": SubResource("AnimationLibrary_b3xo3")
 }
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7bu5n")
+autoplay = true
 
 [connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

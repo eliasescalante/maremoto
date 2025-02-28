@@ -6,7 +6,6 @@ extends Node2D
 @onready var close_curtain: Sprite2D = $CloseCurtain  # El Sprite de la cortina
 
 func _ready() -> void:
-	# Reproducir la animación de la transición
 	animation_player.play("transicion")
 
 func _on_salir_pressed() -> void:

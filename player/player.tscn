@@ -183,7 +183,7 @@ position = Vector2(0.658824, -2.16949)
 scale = Vector2(0.100465, 0.086725)
 sprite_frames = SubResource("SpriteFrames_awe8i")
 animation = &"idle_right"
-frame_progress = 0.258442
+frame_progress = 0.731647
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

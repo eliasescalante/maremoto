@@ -212,6 +212,63 @@ position = Vector2(12797, 290)
 [node name="PisoHoja49" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(13187, -927)
 
+[node name="PisoHoja50" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13406, -1199)
+
+[node name="PisoHoja51" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12915, -1282)
+
+[node name="PisoHoja52" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13383, -1463)
+
+[node name="PisoHoja53" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12635, -1493)
+
+[node name="PisoHoja54" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13413, -1901)
+
+[node name="PisoHoja55" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12960, -1841)
+
+[node name="PisoHoja56" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13171, -2143)
+
+[node name="PisoHoja61" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13299, -1781)
+
+[node name="PisoHoja62" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12559, -2370)
+
+[node name="PisoHoja63" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13020, -2400)
+
+[node name="PisoHoja64" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13496, -2272)
+
+[node name="PisoHoja65" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13360, -2544)
+
+[node name="PisoHoja66" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12779, -2665)
+
+[node name="PisoHoja67" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13134, -2771)
+
+[node name="PisoHoja68" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12447, -2733)
+
+[node name="PisoHoja57" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12786, -2143)
+
+[node name="PisoHoja58" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12688, -1750)
+
+[node name="PisoHoja59" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13073, -1093)
+
+[node name="PisoHoja60" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(13073, -1093)
+
 [node name="PisoHoja38" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(13275, 370)
 
@@ -223,6 +280,9 @@ position = Vector2(13504, -796)
 
 [node name="PisoHoja41" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(12711, -950)
+
+[node name="PisoHoja69" parent="ui/hojas" instance=ExtResource("6_gsemg")]
+position = Vector2(12620, -708)
 
 [node name="PisoHoja42" parent="ui/hojas" instance=ExtResource("6_gsemg")]
 position = Vector2(12988, -1609)
@@ -577,6 +637,8 @@ shape = SubResource("RectangleShape2D_a3ute")
 [node name="WindAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gomi1")
 volume_db = 23.01
+
+[node name="wind_audio_timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
 [connection signal="body_entered" from="win" to="." method="_on_win_body_entered"]

@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D/AnimatedSprite2D
 @onready var camera = $Camera2D
 @onready var footstep_audio = $FootstepAudio  # Referencia al sonido de pasos
+@onready var wind_audio: AudioStreamPlayer2D = get_node("/root/Level1/WindAudio")  # Referencia al audio del viento
 
 var idle_animation: String = "idle_right"
 var current_wind_force: float = 0.0  # Fuerza actual del viento

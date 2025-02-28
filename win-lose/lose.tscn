@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlcs3snl3ru0u"]
+[gd_scene load_steps=16 format=3 uid="uid://dlcs3snl3ru0u"]
 
 [ext_resource type="Script" path="res://win-lose/lose.gd" id="1_5eet8"]
 [ext_resource type="Texture2D" uid="uid://yvqmelo470am" path="res://win-lose/lvl2  arbol 2.png" id="2_4n0n8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmec0d5j6615i" path="res://main/galery buttom.png" id="4_fiv8b"]
 [ext_resource type="Texture2D" uid="uid://biditfpugh0x8" path="res://main/credits buttom.png" id="5_hqhsm"]
 [ext_resource type="Texture2D" uid="uid://bypr4bcvb0v6s" path="res://main/cargarpartida buttom.png" id="6_tqlor"]
+[ext_resource type="AudioStream" uid="uid://cfvdrouwdoufy" path="res://win-lose/ending.mp3" id="8_ymqg3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1pnp"]
 font_size = 90
@@ -97,6 +98,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_56xyv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0h211")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ch8w5")
 text = "SALIR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ymqg3")
+autoplay = true
 
 [connection signal="pressed" from="ui/TRY" to="." method="_on_try_pressed"]
 [connection signal="pressed" from="ui/QUIT" to="." method="_on_quit_pressed"]
